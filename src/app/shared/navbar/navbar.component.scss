@@ -28,6 +28,8 @@
         color: #fff;
         text-decoration: none;
         transition: color 0.3s ease;
+        position: relative;
+        z-index: 1;
 
         &:hover {
             color: #007bff;
@@ -113,20 +115,20 @@
 @media (max-width: 768px) {
     .navbar-menu {
         position: fixed;
-        top: 70px;
         left: 0;
         width: 100%;
         background-color: #121212;
         flex-direction: column;
         align-items: center;
         padding: 2rem 0;
-        transform: translateY(-100%);
+        transform: translateY(-200%) scaleY(2);
         opacity: 0;
         transition: all 0.3s ease;
 
         &.active {
             transform: translateY(0);
             opacity: 1;
+            top: 70px;
         }
 
         li {

@@ -13,4 +13,31 @@
     margin: 0 auto;
     padding-left: 2rem;
     padding-right: 2rem;
+    margin-bottom: 30px;
+}
+
+.github-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: #1976d2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    z-index: 1000;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }
