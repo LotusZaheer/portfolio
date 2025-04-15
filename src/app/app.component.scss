@@ -1,9 +1,12 @@
+@use "sass:color";
+@use "../styles/_variables" as *;
+
 :host {
     display: block;
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
-    background-color: rgba(18, 18, 18, 1);
-    color: #f5f5f5;
+    background-color: $background-dark;
+    color: $text-primary;
 }
 
 .main-content {
@@ -22,7 +25,7 @@
     left: 0;
     right: 0;
     height: 30px;
-    background-color: #1976d2;
+    background-color: $primary-color;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -30,7 +33,7 @@
     z-index: 1000;
 
     a {
-        color: white;
+        color: $text-primary;
         text-decoration: none;
         font-size: 14px;
         font-weight: 500;
