@@ -1,0 +1,202 @@
+@use "sass:color";
+@use "../../../styles/_variables" as *;
+
+.projects-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    color: $text-primary;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.project-card {
+    background: $background-card;
+    border-radius: $border-radius-card;
+    overflow: hidden;
+    box-shadow: $shadow-card;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: row;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $shadow-card-hover;
+    }
+
+    &.featured {
+        border: 2px solid $accent-color;
+    }
+}
+
+.project-image-container {
+    flex: 0 0 400px;
+    position: relative;
+}
+
+.project-image-carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+
+    .project-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+    }
+}
+
+.carousel-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.3);
+
+    .progress-bar {
+        height: 100%;
+        background: $accent-color;
+        transition: width 0.1s linear;
+    }
+}
+
+.project-content {
+    flex: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    color: $text-primary;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    color: $text-secondary;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.project-details {
+    margin-bottom: 1.5rem;
+    flex: 1;
+
+    .detail-section {
+        margin-bottom: 1rem;
+
+        h4 {
+            color: $accent-color;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        p {
+            color: $text-secondary;
+        }
+    }
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .tag {
+        background: $background-darker;
+        color: $highlight-color;
+        padding: 0.3rem 0.8rem;
+        border-radius: $border-radius;
+        font-size: 0.9rem;
+    }
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+
+    .link-button {
+        flex: 1;
+        padding: 0.8rem;
+        text-align: center;
+        background: $primary-color;
+        color: $text-primary;
+        text-decoration: none;
+        border-radius: $border-radius;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background: $secondary-color;
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .projects-container {
+        padding: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .project-card {
+        flex-direction: column;
+    }
+
+    .project-image-container {
+        flex: 0 0 300px;
+    }
+
+    .project-image-carousel {
+        height: 300px;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-content {
+        padding: 1rem;
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+    }
+
+    .project-image-container {
+        flex: 0 0 250px;
+    }
+
+    .project-image-carousel {
+        height: 250px;
+    }
+
+    .tags {
+        .tag {
+            font-size: 0.8rem;
+        }
+    }
+}
