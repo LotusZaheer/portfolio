@@ -13,6 +13,7 @@ interface Project {
   repoUrl: string;
   featured: boolean;
   currentImageIndex: number;
+  progress: number;
 }
 
 @Component({
@@ -24,7 +25,9 @@ interface Project {
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
   private carouselIntervals: { [key: number]: any } = {};
+  private progressIntervals: { [key: number]: any } = {};
   readonly CAROUSEL_INTERVAL = 3000; // 3 segundos
+  readonly PROGRESS_INTERVAL = 30; // Actualizar cada 30ms para una animación suave
 
   // Colores de fondo alternados para cuando no hay imágenes
   readonly fallbackColors = [
@@ -44,14 +47,15 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       languages: ['TypeScript', 'JavaScript', 'HTML', 'SCSS'],
       role: 'Desarrollador Full Stack',
       images: [
-        '/assets/images/projects/ecommerce-1.jpg',
-        '/assets/images/projects/ecommerce-2.jpg',
-        '/assets/images/projects/ecommerce-3.jpg'
+        './assets/images/projects/ecommerce-1.svg',
+        './assets/images/projects/ecommerce-2.svg',
+        './assets/images/projects/ecommerce-3.svg'
       ],
       liveUrl: 'https://ecommerce-demo.com',
       repoUrl: 'https://github.com/user/ecommerce',
       featured: true,
-      currentImageIndex: 0
+      currentImageIndex: 0,
+      progress: 0
     },
     {
       id: 2,
@@ -67,7 +71,8 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       liveUrl: 'https://task-manager-demo.com',
       repoUrl: 'https://github.com/user/task-manager',
       featured: true,
-      currentImageIndex: 0
+      currentImageIndex: 0,
+      progress: 0
     },
     {
       id: 3,
@@ -82,7 +87,8 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       ],
       repoUrl: 'https://github.com/user/api-services',
       featured: false,
-      currentImageIndex: 0
+      currentImageIndex: 0,
+      progress: 0
     }
   ];
 
@@ -96,14 +102,23 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
   private startCarousels() {
     this.projects.forEach(project => {
+      // Iniciar el carrusel de imágenes
       this.carouselIntervals[project.id] = setInterval(() => {
         project.currentImageIndex = (project.currentImageIndex + 1) % project.images.length;
+        project.progress = 0; // Reiniciar el progreso
       }, this.CAROUSEL_INTERVAL);
+
+      // Iniciar la animación de la barra de progreso
+      this.progressIntervals[project.id] = setInterval(() => {
+        const increment = (100 / (this.CAROUSEL_INTERVAL / this.PROGRESS_INTERVAL));
+        project.progress = Math.min(100, project.progress + increment);
+      }, this.PROGRESS_INTERVAL);
     });
   }
 
   private stopCarousels() {
     Object.values(this.carouselIntervals).forEach(interval => clearInterval(interval));
+    Object.values(this.progressIntervals).forEach(interval => clearInterval(interval));
   }
 
   getCurrentImage(project: Project): string {
@@ -111,8 +126,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   }
 
   getProgressWidth(project: Project): string {
-    const progress = ((Date.now() % this.CAROUSEL_INTERVAL) / this.CAROUSEL_INTERVAL) * 100;
-    return `${progress}%`;
+    return `${project.progress}%`;
   }
 
   getFallbackBackground(project: Project): string {
