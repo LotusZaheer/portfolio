@@ -26,6 +26,15 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   private carouselIntervals: { [key: number]: any } = {};
   readonly CAROUSEL_INTERVAL = 3000; // 3 segundos
 
+  // Colores de fondo alternados para cuando no hay imágenes
+  readonly fallbackColors = [
+    'linear-gradient(135deg, #004466 0%, #00778A 100%)',
+    'linear-gradient(135deg, #00778A 0%, #00B8B8 100%)',
+    'linear-gradient(135deg, #00B8B8 0%, #AEEB60 100%)',
+    'linear-gradient(135deg, #AEEB60 0%, #FFA93C 100%)',
+    'linear-gradient(135deg, #FFA93C 0%, #004466 100%)'
+  ];
+
   projects: Project[] = [
     {
       id: 1,
@@ -104,5 +113,14 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   getProgressWidth(project: Project): string {
     const progress = ((Date.now() % this.CAROUSEL_INTERVAL) / this.CAROUSEL_INTERVAL) * 100;
     return `${progress}%`;
+  }
+
+  getFallbackBackground(project: Project): string {
+    return this.fallbackColors[project.currentImageIndex % this.fallbackColors.length];
+  }
+
+  hasValidImage(project: Project): boolean {
+    const imageUrl = this.getCurrentImage(project);
+    return typeof imageUrl === 'string' && imageUrl.trim() !== '';
   }
 }
