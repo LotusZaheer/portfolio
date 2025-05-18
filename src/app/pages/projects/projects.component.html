@@ -52,12 +52,15 @@
                 <div class="project-links">
                     @if (project.liveUrl) {
                     <a [href]="project.liveUrl" target="_blank" class="link-button">
-                        Ver Demo
+                        {{project.liveName}}
                     </a>
                     }
+
+                    @if (project.repoUrl) {
                     <a [href]="project.repoUrl" target="_blank" class="link-button">
-                        Ver Código
+                        {{project.repoName}}
                     </a>
+                }
                 </div>
             </div>
         </article>

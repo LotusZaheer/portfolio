@@ -10,7 +10,9 @@ interface Project {
   role: string;
   images: string[];
   liveUrl?: string;
-  repoUrl: string;
+  liveName?: string;
+  repoUrl?: string;
+  repoName?: string;
   featured: boolean;
   currentImageIndex: number;
   progress: number;
@@ -41,22 +43,35 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   projects: Project[] = [
     {
       id: 1,
-      title: 'E-commerce Platform',
-      description: 'Plataforma de comercio electrónico completa con carrito de compras, sistema de pagos y panel de administración.',
-      technologies: ['Angular', 'Node.js', 'MongoDB', 'Express'],
-      languages: ['TypeScript', 'JavaScript', 'HTML', 'SCSS'],
+      title: 'Beatride – Plataforma de Ruteo Comercial y Logístico',
+      description: 'Beatride es una plataforma orientada a optimizar el Route to Market (RTM), permitiendo la creación de rutas eficientes para equipos comerciales y logísticos. Participé en el desarrollo frontend con Angular e integración optimizada de Google Maps. También desarrollé scripts para el backend en C++ (usando OR-Tools) e integrados con Python mediante ctypes, para realizar cálculos logísticos basados en datos geoespaciales.',
+      technologies: ['Angular', 'Google Maps API', 'Python', 'OR-Tools', 'Pandas', 'GeoPandas', 'Numpy', 'Dask', 'PySpark', 'ESRI'],
+      languages: ['TypeScript', 'Python', 'C++'],
       role: 'Desarrollador Full Stack',
       images: [
-        './assets/images/projects/ecommerce-1.svg',
-        './assets/images/projects/ecommerce-2.svg',
-        './assets/images/projects/ecommerce-3.svg'
+        './assets/images/projects/beatridemap-1.jpeg',
+        './assets/images/projects/beatridemap-2.jpeg',
+        './assets/images/projects/beatridemap-3.jpeg',
+        './assets/images/projects/beatridemap-4.jpeg',
+        './assets/images/projects/beatridemap-5.jpeg',
+        './assets/images/projects/beatridemap-6.jpeg',
+        './assets/images/projects/beatridemap-7.jpeg',
+        './assets/images/projects/beatridemap-8.jpeg',
+        './assets/images/projects/beatridemap-9.jpeg',
+        './assets/images/projects/beatridemap-10.jpeg',
+        './assets/images/projects/beatridemap-11.jpeg',
+        './assets/images/projects/beatridemap-12.jpeg',
+        './assets/images/projects/beatridemap-13.jpeg',
+        './assets/images/projects/beatridemap-14.jpeg',
       ],
-      liveUrl: 'https://ecommerce-demo.com',
-      repoUrl: 'https://github.com/user/ecommerce',
+      liveUrl: 'https://beatride.co',
+      liveName: 'Ir a Beatride',
       featured: true,
       currentImageIndex: 0,
       progress: 0
-    },
+    }
+
+    /*
     {
       id: 2,
       title: 'Sistema de Gestión de Tareas',
@@ -90,6 +105,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       currentImageIndex: 0,
       progress: 0
     }
+      */
   ];
 
   ngOnInit() {

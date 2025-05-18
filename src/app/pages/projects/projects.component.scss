@@ -44,25 +44,32 @@
 }
 
 .project-image-container {
-    flex: 0 0 400px;
+    flex: 0 0 600px;
     position: relative;
 }
 
 .project-image-carousel {
     position: relative;
     width: 100%;
-    height: 400px;
+    padding-top: 66.67%;
     overflow: hidden;
     transition: background 0.3s ease;
 
     .project-image {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: top left;
         transition: opacity 0.3s ease;
     }
 
     .fallback-content {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         display: flex;
@@ -86,6 +93,7 @@
     width: 100%;
     height: 4px;
     background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
 
     .progress-bar {
         height: 100%;
@@ -168,6 +176,12 @@
 }
 
 // Responsive Design
+@media (max-width: 1024px) {
+    .project-image-container {
+        flex: 0 0 450px;
+    }
+}
+
 @media (max-width: 768px) {
     .projects-container {
         padding: 1rem;
@@ -182,12 +196,10 @@
     }
 
     .project-image-container {
-        flex: 0 0 300px;
+        flex: 0 0 100%;
     }
 
     .project-image-carousel {
-        height: 300px;
-
         .fallback-content .project-initial {
             font-size: 6rem;
         }
@@ -207,13 +219,7 @@
         font-size: 1.3rem;
     }
 
-    .project-image-container {
-        flex: 0 0 250px;
-    }
-
     .project-image-carousel {
-        height: 250px;
-
         .fallback-content .project-initial {
             font-size: 4rem;
         }
