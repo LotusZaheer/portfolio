@@ -34,7 +34,12 @@
                         <h4>Tecnologías</h4>
                         <div class="tags">
                             @for (tech of project.technologies; track tech) {
-                            <span class="tag">{{ tech }}</span>
+                            <span class="tag">
+                                @if (getIcon(tech, technologyIcons)) {
+                                <img [src]="getIcon(tech, technologyIcons)" [alt]="tech" class="tech-icon">
+                                }
+                                {{ tech }}
+                            </span>
                             }
                         </div>
                     </div>
@@ -43,7 +48,12 @@
                         <h4>Lenguajes</h4>
                         <div class="tags">
                             @for (lang of project.languages; track lang) {
-                            <span class="tag">{{ lang }}</span>
+                            <span class="tag">
+                                @if (getIcon(lang, languageIcons)) {
+                                <img [src]="getIcon(lang, languageIcons)" [alt]="lang" class="tech-icon">
+                                }
+                                {{ lang }}
+                            </span>
                             }
                         </div>
                     </div>
@@ -60,7 +70,7 @@
                     <a [href]="project.repoUrl" target="_blank" class="link-button">
                         {{project.repoName}}
                     </a>
-                }
+                    }
                 </div>
             </div>
         </article>

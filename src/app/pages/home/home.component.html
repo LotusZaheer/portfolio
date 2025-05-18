@@ -27,30 +27,35 @@
     </div>
 </section>
 
-<section class="about">
-    <div class="container">
-        <h2 class="section-title">Sobre Mí</h2>
-        <div class="about-content">
-            <p>
-
-                Soy un apasionado por los microcontroladores, la estadistica y la optimización de procesos.
-                Me gusta estar en constante aprendizaje de nuevas tecnologías y metodos matemáticos para resolver
-                problemas de la vida real.
-
-                En mis tiempos libres disfruto de la cocina, la música y el deporte.
-            </p>
-            <p>
-
-            </p>
+<section class="about-section">
+    <h2 class="section-title">Sobre Mí</h2>
+    <div class="tech-stack">
+        <div class="tech-category">
+            <h3>Lenguajes</h3>
+            <div class="tech-icons">
+                @for (lang of languages; track lang) {
+                <div class="tech-icon">
+                    @if (getIcon(lang, languageIcons)) {
+                    <img [src]="getIcon(lang, languageIcons)" [alt]="lang" class="tech-image">
+                    }
+                    <span>{{ lang }}</span>
+                </div>
+                }
+            </div>
         </div>
-        <div class="tech-icons">
-            <div class="tech-icon">Python</div>
-            <div class="tech-icon">Typescript</div>
-            <div class="tech-icon">C++</div>
-            <div class="tech-icon">Pyomo</div>
-            <div class="tech-icon">Angular</div>
-            <div class="tech-icon">FastAPI</div>
-            <div class="tech-icon">Docker</div>
+
+        <div class="tech-category">
+            <h3>Tecnologías</h3>
+            <div class="tech-icons">
+                @for (tech of technologies; track tech) {
+                <div class="tech-icon">
+                    @if (getIcon(tech, technologyIcons)) {
+                    <img [src]="getIcon(tech, technologyIcons)" [alt]="tech" class="tech-image">
+                    }
+                    <span>{{ tech }}</span>
+                </div>
+                }
+            </div>
         </div>
     </div>
 </section>

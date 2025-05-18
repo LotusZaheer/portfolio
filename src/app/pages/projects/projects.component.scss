@@ -151,6 +151,15 @@
         padding: 0.3rem 0.8rem;
         border-radius: $border-radius;
         font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .tech-icon {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
     }
 }
 

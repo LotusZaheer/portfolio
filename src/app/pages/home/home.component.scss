@@ -1,6 +1,10 @@
 @use "sass:color";
 @use "../../../styles/_variables" as *;
 
+// Variables específicas para las secciones
+$languages-color: #2196F3; // Azul para lenguajes
+$technologies-color: #4CAF50; // Verde para tecnologías
+
 .hero {
     padding: 5rem 0;
 
@@ -146,6 +150,166 @@
                 border-color: $accent-color;
                 background-color: rgba($accent-color, 0.1);
             }
+        }
+    }
+}
+
+.about-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: $background-darker;
+}
+
+.section-title {
+    color: $text-primary;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: $gradient-primary;
+        border-radius: 2px;
+    }
+}
+
+.tech-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.tech-category {
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    &:first-child {
+        h3 {
+            color: $languages-color;
+        }
+
+        .tech-icon {
+            border-color: rgba($languages-color, 0.3);
+            color: $languages-color;
+
+            i {
+                color: $languages-color;
+            }
+
+            &:hover {
+                border-color: $languages-color;
+                background-color: rgba($languages-color, 0.1);
+            }
+        }
+    }
+
+    &:last-child {
+        h3 {
+            color: $technologies-color;
+        }
+
+        .tech-icon {
+            border-color: rgba($technologies-color, 0.3);
+            color: $technologies-color;
+
+            i {
+                color: $technologies-color;
+            }
+
+            &:hover {
+                border-color: $technologies-color;
+                background-color: rgba($technologies-color, 0.1);
+            }
+        }
+    }
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.tech-icon {
+    padding: 0.7rem 1.5rem;
+    background-color: $background-dark;
+    border-radius: 30px;
+    color: $accent-color;
+    font-weight: 500;
+    border: 1px solid $background-card-darker;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .tech-image {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+    }
+
+    span {
+        color: $text-secondary;
+        font-size: 0.9rem;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $shadow-card-hover;
+        border-color: $accent-color;
+        background-color: rgba($accent-color, 0.1);
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .about-section {
+        padding: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .tech-icons {
+        gap: 0.8rem;
+    }
+
+    .tech-icon {
+        padding: 0.6rem 1.2rem;
+
+        i {
+            font-size: 1.3rem;
+        }
+
+        span {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-icon {
+        padding: 0.5rem 1rem;
+
+        i {
+            font-size: 1.2rem;
+        }
+
+        span {
+            font-size: 0.7rem;
         }
     }
 }
