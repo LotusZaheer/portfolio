@@ -57,5 +57,19 @@
                 }
             </div>
         </div>
+
+        <div class="tech-category">
+            <h3>Contacto</h3>
+            <div class="tech-icons">
+                @for (network of socialNetworks; track network.name) {
+                <a class="tech-icon" [href]="network.url" target="_blank" >
+                        <img [src]="network.iconPath" [alt]="network.name" class="tech-image">
+                    <span> {{ network.name }}</span>
+                </a>
+                }
+            </div>
+        </div>
+
+
     </div>
 </section>

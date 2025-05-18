@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { projects } from '../../data/projects.data';
 import { languageIcons, technologyIcons, TechIcon } from '../../data/tech-icons.data';
+import { socialNetworks, SocialNetwork } from '../../data/social-networks.data';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ export class HomeComponent implements OnInit {
   technologies: string[] = [];
   languageIcons = languageIcons;
   technologyIcons = technologyIcons;
+  socialNetworks = socialNetworks;
 
   ngOnInit() {
     this.updateTechStack();
