@@ -1,7 +1,8 @@
 <nav class="navbar">
     <div class="navbar-container">
         <div class="navbar-logo">
-            <a routerLink="/">Mi Portafolio</a>
+            <a routerLink="/"><span>{{ displayName }}</span>
+            </a>
         </div>
         <ul class="navbar-menu" [class.active]="mobileMenuOpen">
             <li><a routerLink="/home" routerLinkActive="active" (click)="mobileMenuOpen = false">Inicio</a></li>

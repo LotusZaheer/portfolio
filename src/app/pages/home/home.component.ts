@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { projects } from '../../data/projects.data';
 import { languageIcons, technologyIcons, TechIcon } from '../../data/tech-icons.data';
-import { socialNetworks, SocialNetwork } from '../../data/social-networks.data';
+import { socialNetworks } from '../../data/social-networks.data';
+import { animateNameRewrite } from './../../shared/functions/utils';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.updateTechStack();
+
+    this.currentName = this.nameA;
+    this.targetName = this.nameB;
+    this.displayName = this.currentName;
+    this.runAnimation();
   }
 
   private updateTechStack() {
@@ -40,4 +46,30 @@ export class HomeComponent implements OnInit {
     const icon = icons.find(icon => icon.name === name);
     return icon ? icon.iconPath : null;
   }
+
+
+  /////////////////////////////////////////////////////
+
+  nameA = '@LotusZaheer';
+  nameB = 'Andrés Uribe';
+  displayName = '';
+  private currentName = '';
+  private targetName = '';
+  private blinkChar = '■';
+
+
+  runAnimation() {
+    animateNameRewrite(
+      this.currentName,
+      this.targetName,
+      this.blinkChar,
+      text => this.displayName = text,
+      () => {
+        this.currentName = this.targetName;
+        this.targetName = this.currentName === this.nameA ? this.nameB : this.nameA;
+        setTimeout(() => this.runAnimation(), 5000);
+      }
+    );
+  }
+
 }
