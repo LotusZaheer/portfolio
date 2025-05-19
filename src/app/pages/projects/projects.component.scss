@@ -129,7 +129,7 @@
         margin-bottom: 1rem;
 
         h4 {
-            color: $accent-color;
+            color: $text-primary;
             margin-bottom: 0.5rem;
             font-size: 1.1rem;
         }
@@ -147,13 +147,13 @@
 
     .tag {
         background: $background-darker;
-        color: $highlight-color;
         padding: 0.3rem 0.8rem;
         border-radius: $border-radius;
         font-size: 0.9rem;
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        color: $text-secondary;
 
         .tech-icon {
             width: 20px;

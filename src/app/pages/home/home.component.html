@@ -30,7 +30,8 @@
 <section class="about-section">
     <h2 class="section-title">Sobre Mí</h2>
     <div class="tech-stack">
-        <div class="tech-category">
+
+        <div class="tech-category languages">
             <h3>Lenguajes</h3>
             <div class="tech-icons">
                 @for (lang of languages; track lang) {
@@ -44,7 +45,7 @@
             </div>
         </div>
 
-        <div class="tech-category">
+        <div class="tech-category technologies">
             <h3>Tecnologías</h3>
             <div class="tech-icons">
                 @for (tech of technologies; track tech) {
@@ -58,7 +59,7 @@
             </div>
         </div>
 
-        <div class="tech-category">
+        <div class="tech-category contact">
             <h3>Contacto</h3>
             <div class="tech-icons">
                 @for (network of socialNetworks; track network.name) {
@@ -69,7 +70,6 @@
                 }
             </div>
         </div>
-
 
     </div>
 </section>
