@@ -124,6 +124,10 @@ a:hover {
   }
 
   &-outline {
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     background-color: transparent;
     border: 2px solid $accent-color;
     color: $accent-color;

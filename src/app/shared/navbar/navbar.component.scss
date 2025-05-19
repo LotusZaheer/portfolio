@@ -101,15 +101,16 @@
     &.active {
         span {
             &:first-child {
-                transform: translateY(9px) rotate(45deg);
+                transform: translateY(9px) rotate(225deg);
             }
 
             &:nth-child(2) {
+                transform: scale(0);
                 opacity: 0;
             }
 
             &:last-child {
-                transform: translateY(-9px) rotate(-45deg);
+                transform: translateY(-9px) rotate(-225deg);
             }
         }
     }
