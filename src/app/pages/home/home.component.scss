@@ -96,7 +96,7 @@
 
 .about {
     padding: 5rem 0;
-    background-color: $background-darker;
+    background-color: $background-light;
 
     .section-title {
         text-align: center;
@@ -139,7 +139,7 @@
             border-radius: 30px;
             color: $accent-color;
             font-weight: 500;
-            border: 1px solid $background-card-darker;
+            border: 1px solid $background-card-light;
             transition: all 0.3s ease;
 
             &:hover {
@@ -156,7 +156,7 @@
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: $background-darker;
+    background-color: $background-light;
 }
 
 .section-title {
@@ -218,7 +218,7 @@
 }
 
 .technologies {
-    @include tech-category-styles($warm-color);
+    @include tech-category-styles($sub-highlight-color);
 }
 
 .contact {
@@ -239,7 +239,7 @@
     border-radius: 30px;
     color: $accent-color;
     font-weight: 500;
-    border: 1px solid $background-card-darker;
+    border: 1px solid $background-card-light;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
