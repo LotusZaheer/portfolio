@@ -1,5 +1,3 @@
-
-
 @use "sass:color";
 
 // Colores principales (Acentos)
@@ -11,7 +9,9 @@ $sub-highlight-color: #F23827;
 
 // Colores de fondo
 $background-dark: #000; // Fondo principal
+$background-dark-75: #000000C0; // Fondo principal
 $background-card: #1A1A1A; // Fondo de tarjetas
+$background-card-50: #1A1A1A80; // Fondo de tarjetas
 $background-light: color.adjust($background-dark, $lightness: 5.5%);
 $background-card-light: color.adjust($background-card, $lightness: 5.5%);
 

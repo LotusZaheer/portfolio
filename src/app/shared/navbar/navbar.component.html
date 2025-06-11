@@ -5,9 +5,12 @@
             </a>
         </div>
         <ul class="navbar-menu" [class.active]="mobileMenuOpen">
-            <li><a routerLink="/home" routerLinkActive="active" (click)="mobileMenuOpen = false">Inicio</a></li>
-            <li><a routerLink="/projects" routerLinkActive="active" (click)="mobileMenuOpen = false">Proyectos</a></li>
-            <li><a routerLink="/skills" routerLinkActive="active" (click)="mobileMenuOpen = false">Habilidades</a></li>
+            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                    (click)="mobileMenuOpen = false">Inicio</a></li>
+            <li><a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                    (click)="mobileMenuOpen = false">Proyectos</a></li>
+            <li><a routerLink="/skills" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                    (click)="mobileMenuOpen = false">Habilidades</a></li>
         </ul>
         <div class="navbar-mobile-toggle" [class.active]="mobileMenuOpen" (click)="toggleMobileMenu()">
             <span></span>

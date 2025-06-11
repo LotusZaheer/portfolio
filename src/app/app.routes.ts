@@ -5,7 +5,6 @@ import { SkillsComponent } from './pages/skills/skills.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'home', component: HomeComponent },
     { path: 'projects', component: ProjectsComponent },
     { path: 'skills', component: SkillsComponent },
     { path: '**', redirectTo: '' }

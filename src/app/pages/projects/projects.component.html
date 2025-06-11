@@ -7,6 +7,7 @@
             <div class="project-image-container">
                 <div class="project-image-carousel"
                     [style.background]="!hasValidImage(project) ? getFallbackBackground(project) : 'none'">
+
                     @if (hasValidImage(project)) {
                     <img [src]="getCurrentImage(project)" [alt]="project.title" class="project-image">
                     } @else {
@@ -14,6 +15,21 @@
                         <span class="project-initial">{{ project.title.charAt(0) }}</span>
                     </div>
                     }
+
+                    <div class="project-links">
+                        @if (project.liveUrl) {
+                        <a [href]="project.liveUrl" target="_blank" class="link-button">
+                            {{project.liveName}}
+                        </a>
+                        }
+
+                        @if (project.repoUrl) {
+                        <a [href]="project.repoUrl" target="_blank" class="link-button">
+                            {{project.repoName}}
+                        </a>
+                        }
+                    </div>
+
                     <div class="carousel-progress">
                         <div class="progress-bar" [style.width.%]="getProgressWidth(project)"></div>
                     </div>
@@ -58,20 +74,6 @@
                         </div>
                     </div>
 
-                </div>
-
-                <div class="project-links">
-                    @if (project.liveUrl) {
-                    <a [href]="project.liveUrl" target="_blank" class="link-button">
-                        {{project.liveName}}
-                    </a>
-                    }
-
-                    @if (project.repoUrl) {
-                    <a [href]="project.repoUrl" target="_blank" class="link-button">
-                        {{project.repoName}}
-                    </a>
-                    }
                 </div>
             </div>
         </article>
