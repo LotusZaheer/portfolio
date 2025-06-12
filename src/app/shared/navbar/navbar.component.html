@@ -1,7 +1,7 @@
 <nav class="navbar">
     <div class="navbar-container">
         <div class="navbar-logo">
-            <a href="#inicio"><span>{{ displayName }}</span></a>
+            <a><span>{{ displayName }}</span></a>
         </div>
         <ul class="navbar-menu" [class.active]="mobileMenuOpen">
             <li><a href="#inicio" (click)="scrollToSection('inicio'); mobileMenuOpen = false"

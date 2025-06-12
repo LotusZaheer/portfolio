@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: 'Beatride – Plataforma de Ruteo Comercial y Logístico',
     description: 'Beatride es una plataforma orientada a optimizar el Route to Market (RTM), permitiendo la creación de rutas eficientes para equipos comerciales y logísticos. Participé en el desarrollo frontend con Angular e integración optimizada de Google Maps. También desarrollé scripts para el backend en C++ (usando OR-Tools) e integrados con Python mediante ctypes, para realizar cálculos logísticos basados en datos geoespaciales.',
     technologies: ['Angular', 'Google Maps API', 'OR-Tools', 'Pandas', 'GeoPandas', 'Numpy', 'Dask', 'ESRI', 'Docker'],
-    languages: ['TypeScript', 'Python', 'C++'],
+    languages: ['Python', 'C++', 'TypeScript', 'SCSS', 'HTML5'],
     company: 'OrusXpert SAS',
     companyUrl: 'https://orusxpert.co',
     role: 'Desarrollador Full Stack',
