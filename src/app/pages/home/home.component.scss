@@ -153,7 +153,7 @@
 }
 
 .type2 {
-    padding: 2rem;
+    padding: 5rem 2rem;
     max-width: 1200px;
     margin: 2rem auto;
     background-color: $background-light;
@@ -254,7 +254,7 @@
 // Responsive Design
 @media (max-width: 768px) {
     .type2 {
-        padding: 1rem;
+        padding: 5rem 1rem;
     }
 
     .section-title {
