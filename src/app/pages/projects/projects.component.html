@@ -1,82 +1,89 @@
-<section class="projects-container">
-    <h2 class="section-title">Proyectos</h2>
+<div class="projects-list">
+    @for (project of projects; track project.id) {
+    <article class="project-card" [class.featured]="project.featured">
+        <div class="project-image-container">
+            <div class="project-image-carousel"
+                [style.background]="!hasValidImage(project) ? getFallbackBackground(project) : 'none'">
 
-    <div class="projects-list">
-        @for (project of projects; track project.id) {
-        <article class="project-card" [class.featured]="project.featured">
-            <div class="project-image-container">
-                <div class="project-image-carousel"
-                    [style.background]="!hasValidImage(project) ? getFallbackBackground(project) : 'none'">
+                @if (hasValidImage(project)) {
+                <img [src]="getCurrentImage(project)" [alt]="project.title" class="project-image">
+                } @else {
+                <div class="fallback-content">
+                    <span class="project-initial">{{ project.title.charAt(0) }}</span>
+                </div>
+                }
 
-                    @if (hasValidImage(project)) {
-                    <img [src]="getCurrentImage(project)" [alt]="project.title" class="project-image">
-                    } @else {
-                    <div class="fallback-content">
-                        <span class="project-initial">{{ project.title.charAt(0) }}</span>
-                    </div>
+                <div class="project-links">
+                    @if (project.liveUrl) {
+                    <a [href]="project.liveUrl" target="_blank" class="link-button">
+                        {{project.liveName}}
+                    </a>
                     }
 
-                    <div class="project-links">
-                        @if (project.liveUrl) {
-                        <a [href]="project.liveUrl" target="_blank" class="link-button">
-                            {{project.liveName}}
-                        </a>
-                        }
+                    @if (project.repoUrl) {
+                    <a [href]="project.repoUrl" target="_blank" class="link-button">
+                        {{project.repoName}}
+                    </a>
+                    }
+                </div>
 
-                        @if (project.repoUrl) {
-                        <a [href]="project.repoUrl" target="_blank" class="link-button">
-                            {{project.repoName}}
-                        </a>
-                        }
-                    </div>
-
-                    <div class="carousel-progress">
-                        <div class="progress-bar" [style.width.%]="getProgressWidth(project)"></div>
-                    </div>
+                <div class="carousel-progress">
+                    <div class="progress-bar" [style.width.%]="getProgressWidth(project)"></div>
                 </div>
             </div>
+        </div>
 
-            <div class="project-content">
-                <h3 class="project-title">{{ project.title }}</h3>
-                <p class="project-description">{{ project.description }}</p>
+        <div class="project-content">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
 
-                <div class="project-details">
-                    <div class="detail-section">
-                        <h4>Rol</h4>
-                        <p>{{ project.role }}</p>
-                    </div>
-
-                    <div class="detail-section">
-                        <h4>Lenguajes</h4>
-                        <div class="tags">
-                            @for (lang of project.languages; track lang) {
-                            <span class="tag">
-                                @if (getIcon(lang, languageIcons)) {
-                                <img [src]="getIcon(lang, languageIcons)" [alt]="lang" class="tech-icon">
-                                }
-                                {{ lang }}
-                            </span>
-                            }
-                        </div>
-                    </div>
-
-                    <div class="detail-section">
-                        <h4>Tecnologías</h4>
-                        <div class="tags">
-                            @for (tech of project.technologies; track tech) {
-                            <span class="tag">
-                                @if (getIcon(tech, technologyIcons)) {
-                                <img [src]="getIcon(tech, technologyIcons)" [alt]="tech" class="tech-icon">
-                                }
-                                {{ tech }}
-                            </span>
-                            }
-                        </div>
-                    </div>
-
+            <div class="project-details">
+                <div class="detail-section" *ngIf="project.company">
+                    <h4>Empresa</h4>
+                    <a *ngIf="project.companyUrl; else noLink" [href]="project.companyUrl" target="_blank" rel="noopener noreferrer">
+                        {{ project.company }}
+                    </a>
+                    <ng-template #noLink>
+                        <p>{{ project.company }}</p>
+                    </ng-template>
                 </div>
+                  
+
+                <div class="detail-section">
+                    <h4>Rol</h4>
+                    <p>{{ project.role }}</p>
+                </div>
+
+                <div class="detail-section">
+                    <h4>Lenguajes</h4>
+                    <div class="tags">
+                        @for (lang of project.languages; track lang) {
+                        <span class="tag">
+                            @if (getIcon(lang, languageIcons)) {
+                            <img [src]="getIcon(lang, languageIcons)" [alt]="lang" class="tech-icon">
+                            }
+                            {{ lang }}
+                        </span>
+                        }
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h4>Tecnologías</h4>
+                    <div class="tags">
+                        @for (tech of project.technologies; track tech) {
+                        <span class="tag">
+                            @if (getIcon(tech, technologyIcons)) {
+                            <img [src]="getIcon(tech, technologyIcons)" [alt]="tech" class="tech-icon">
+                            }
+                            {{ tech }}
+                        </span>
+                        }
+                    </div>
+                </div>
+
             </div>
-        </article>
-        }
-    </div>
-</section>
+        </div>
+    </article>
+    }
+</div>

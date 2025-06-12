@@ -1,16 +1,17 @@
 <nav class="navbar">
     <div class="navbar-container">
         <div class="navbar-logo">
-            <a routerLink="/"><span>{{ displayName }}</span>
-            </a>
+            <a href="#inicio"><span>{{ displayName }}</span></a>
         </div>
         <ul class="navbar-menu" [class.active]="mobileMenuOpen">
-            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                    (click)="mobileMenuOpen = false">Inicio</a></li>
-            <li><a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                    (click)="mobileMenuOpen = false">Proyectos</a></li>
-            <li><a routerLink="/skills" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                    (click)="mobileMenuOpen = false">Habilidades</a></li>
+            <li><a href="#inicio" (click)="scrollToSection('inicio'); mobileMenuOpen = false"
+                    [class.active]="activeSection === 'inicio'">Inicio</a></li>
+            <li><a href="#sobre-mi" (click)="scrollToSection('sobre-mi'); mobileMenuOpen = false"
+                    [class.active]="activeSection === 'sobre-mi'">Sobre mi</a></li>
+            <li><a href="#proyectos" (click)="scrollToSection('proyectos'); mobileMenuOpen = false"
+                    [class.active]="activeSection === 'proyectos'">Proyectos</a></li>
+            <li><a href="#contacto" (click)="scrollToSection('contacto'); mobileMenuOpen = false"
+                    [class.active]="activeSection === 'contacto'">Contacto</a></li>
         </ul>
         <div class="navbar-mobile-toggle" [class.active]="mobileMenuOpen" (click)="toggleMobileMenu()">
             <span></span>

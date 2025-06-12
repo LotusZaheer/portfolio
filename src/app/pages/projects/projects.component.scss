@@ -25,6 +25,7 @@
 }
 
 .project-card {
+    flex: 1;
     background: $background-card;
     border-radius: $border-radius-card;
     overflow: hidden;
@@ -149,6 +150,11 @@
 
         p {
             color: $text-secondary;
+        }
+
+        a {
+            color: $accent-color;
+            text-decoration: underline;
         }
     }
 }

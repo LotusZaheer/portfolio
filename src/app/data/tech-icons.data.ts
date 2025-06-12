@@ -15,6 +15,14 @@ export const languageIcons: TechIcon[] = [
     {
         name: 'C++',
         iconPath: 'assets/images/languages/c-plusplus.svg'
+    },
+    {
+        name: 'HTML5',
+        iconPath: 'assets/images/languages/html5.png'
+    },
+    {
+        name: 'SCSS',
+        iconPath: 'assets/images/languages/scss.png'
     }
 ];
 
@@ -50,5 +58,9 @@ export const technologyIcons: TechIcon[] = [
     {
         name: 'ESRI',
         iconPath: 'assets/images/technologies/esri.png'
+    },
+    {
+        name: 'Docker',
+        iconPath: 'assets/images/technologies/docker.png'
     }
 ]; 

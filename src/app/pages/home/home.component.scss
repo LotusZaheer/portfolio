@@ -2,7 +2,7 @@
 @use "../../../styles/_variables" as *;
 
 // Variables específicas para las secciones
-.hero {
+.type1 {
     padding: 5rem 0;
 
     .container {
@@ -17,7 +17,7 @@
         }
     }
 
-    .hero-content {
+    .type1-content {
         flex: 1;
 
         h1 {
@@ -37,7 +37,7 @@
             font-weight: 400;
         }
 
-        .hero-description {
+        .type1-description {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             max-width: 500px;
@@ -48,7 +48,7 @@
             }
         }
 
-        .hero-buttons {
+        .type1-buttons {
             display: flex;
             gap: 1rem;
 
@@ -58,7 +58,7 @@
         }
     }
 
-    .hero-image {
+    .type1-image {
         flex: 1;
         display: flex;
         justify-content: center;
@@ -152,10 +152,10 @@
     }
 }
 
-.about-section {
+.type2 {
     padding: 2rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 2rem auto;
     background-color: $background-light;
 }
 
@@ -213,19 +213,6 @@
     }
 }
 
-.languages {
-    @include tech-category-styles($accent-color);
-}
-
-.technologies {
-    @include tech-category-styles($sub-highlight-color);
-}
-
-.contact {
-    @include tech-category-styles($highlight-color);
-}
-
-
 .tech-icons {
     display: flex;
     flex-wrap: wrap;
@@ -266,7 +253,7 @@
 
 // Responsive Design
 @media (max-width: 768px) {
-    .about-section {
+    .type2 {
         padding: 1rem;
     }
 

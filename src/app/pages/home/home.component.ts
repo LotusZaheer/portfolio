@@ -1,19 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { projects } from '../../data/projects.data';
 import { languageIcons, technologyIcons, TechIcon } from '../../data/tech-icons.data';
 import { socialNetworks } from '../../data/social-networks.data';
 import { animateNameRewrite } from './../../shared/functions/utils';
+import { ProjectsComponent } from '../projects/projects.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, ProjectsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
+
+  projects: any[] = projects;
+
   languages: string[] = [];
   technologies: string[] = [];
   languageIcons = languageIcons;

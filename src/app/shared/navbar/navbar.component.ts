@@ -1,22 +1,37 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { animateNameRewrite } from './../functions/utils';
+import { ScrollService } from '../services/scroll.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit, OnDestroy {
   mobileMenuOpen = false;
+  activeSection = 'inicio';
+  private subscription: Subscription;
+
+  constructor(private scrollService: ScrollService) {
+    this.subscription = this.scrollService.activeSection$.subscribe(
+      section => this.activeSection = section
+    );
+  }
 
   toggleMobileMenu() {
     console.log('toggleMobileMenu');
     this.mobileMenuOpen = !this.mobileMenuOpen;
   }
 
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
   nameA = 'Andrés Uribe';
   nameB = '@LotusZaheer';
@@ -25,11 +40,9 @@ export class NavbarComponent {
   private targetName = '';
   private blinkChar = '■';
 
-
   ngOnInit() {
     this.currentName = this.nameA;
     this.targetName = this.nameB;
-    this.displayName = this.currentName;
     this.runAnimation();
   }
 
@@ -49,4 +62,9 @@ export class NavbarComponent {
     );
   }
 
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+  }
 }

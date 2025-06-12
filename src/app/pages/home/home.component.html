@@ -1,74 +1,89 @@
-<section class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <h1>¡Hola! Soy <span class="text-gradient">Andrés Uribe</span></h1>
-            <h2>Desarrollador Web</h2>
-            <p class="hero-description">
+<main>
+    <section id="inicio" class="type1">
+        <div class="container">
+            <div class="type1-content">
+                <h1>¡Hola! Soy <span class="text-gradient">Andrés Uribe</span></h1>
+                <h2>Desarrollador Web</h2>
+                <p class="type1-description">
 
-                Soy ingeniero de sistemas con experiencia en análisis de datos y desarrollo de software para resolver
-                desafíos geoespaciales.
-                Con conocimientos en procesamiento de datos con Python, C++ y SQL, utilizando herramientas como pandas,
-                numpy, scipy, or-tools, entre otras.
-                Con amplia experiencia en desarrollo web utilizando tecnologías como Angular, Node.js, FastAPI y React.
-            </p>
-            <div class="hero-buttons">
-                <a routerLink="/projects" class="btn btn-primary">Ver Proyectos</a>
-                <a routerLink="/contact" class="btn btn-outline">Contacto</a>
+                    Soy ingeniero de sistemas con experiencia en análisis de datos y desarrollo de software para
+                    resolver
+                    desafíos geoespaciales.
+                    Con conocimientos en procesamiento de datos con Python, C++ y SQL, utilizando herramientas como
+                    pandas,
+                    numpy, scipy, or-tools, entre otras.
+                    Con amplia experiencia en desarrollo web utilizando tecnologías como Angular, Node.js, FastAPI y
+                    React.
+                </p>
+                <div class="type1-buttons">
+                    <a routerLink="/projects" class="btn btn-primary">Ver Proyectos</a>
+                    <a routerLink="/contact" class="btn btn-outline">Contacto</a>
+                </div>
             </div>
-        </div>
-        <div class="hero-image">
-            <div class="image-container">
-                <div class="profile-placeholder">
-                    <img src="https://avatars.githubusercontent.com/u/53977185?v=4" alt="Andrés Uribe"
-                        class="profile-image">
+            <div class="type1-image">
+                <div class="image-container">
+                    <div class="profile-placeholder">
+                        <img src="https://avatars.githubusercontent.com/u/53977185?v=4" alt="Andrés Uribe"
+                            class="profile-image">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="about-section">
-    <h2 class="section-title">Sobre Mí</h2>
-    <div class="tech-stack">
-        <div class="tech-category">
-            <h3>Lenguajes</h3>
-            <div class="tech-icons">
-                @for (lang of languages; track lang) {
-                <div class="tech-icon">
-                    @if (getIcon(lang, languageIcons)) {
-                    <img [src]="getIcon(lang, languageIcons)" [alt]="lang" class="tech-image">
+    <section id="sobre-mi" class="type2">
+        <h2 class="section-title">Sobre mi</h2>
+        <div class="tech-stack">
+            <div class="tech-category">
+                <h3>Lenguajes</h3>
+                <div class="tech-icons">
+                    @for (lang of languages; track lang) {
+                    <div class="tech-icon">
+                        @if (getIcon(lang, languageIcons)) {
+                        <img [src]="getIcon(lang, languageIcons)" [alt]="lang" class="tech-image">
+                        }
+                        <span>{{ lang }}</span>
+                    </div>
                     }
-                    <span>{{ lang }}</span>
                 </div>
-                }
             </div>
-        </div>
 
-        <div class="tech-category">
-            <h3>Tecnologías</h3>
-            <div class="tech-icons">
-                @for (tech of technologies; track tech) {
-                <div class="tech-icon">
-                    @if (getIcon(tech, technologyIcons)) {
-                    <img [src]="getIcon(tech, technologyIcons)" [alt]="tech" class="tech-image">
+            <div class="tech-category">
+                <h3>Tecnologías</h3>
+                <div class="tech-icons">
+                    @for (tech of technologies; track tech) {
+                    <div class="tech-icon">
+                        @if (getIcon(tech, technologyIcons)) {
+                        <img [src]="getIcon(tech, technologyIcons)" [alt]="tech" class="tech-image">
+                        }
+                        <span>{{ tech }}</span>
+                    </div>
                     }
-                    <span>{{ tech }}</span>
                 </div>
-                }
             </div>
         </div>
+    </section>
 
-        <div class="tech-category">
-            <h3>Contacto</h3>
-            <div class="tech-icons">
-                @for (network of socialNetworks; track network.name) {
-                <a class="tech-icon" [href]="network.url" target="_blank" >
+    <section id="proyectos" class="type1">
+        <h2 class="section-title">Proyectos</h2>
+        <app-projects></app-projects>
+    </section>
+
+    <section id="contacto" class="type2">
+        <h2 class="section-title">Contacto</h2>
+        <div class="tech-stack">
+
+            <div class="tech-category">
+                <div class="tech-icons">
+                    @for (network of socialNetworks; track network.name) {
+                    <a class="tech-icon" [href]="network.url" target="_blank">
                         <img [src]="network.iconPath" [alt]="network.name" class="tech-image">
-                    <span> {{ network.name }}</span>
-                </a>
-                }
+                        <span> {{ network.name }}</span>
+                    </a>
+                    }
+                </div>
             </div>
-        </div>
 
-    </div>
-</section>
+        </div>
+    </section>
+</main>
