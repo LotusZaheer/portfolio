@@ -16,8 +16,12 @@
                     React.
                 </p>
                 <div class="type1-buttons">
-                    <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
-                    <a href="#contacto" class="btn btn-outline">Contacto</a>
+                    <a href="#proyectos" class="btn btn-primary"
+                    (click)="scrollToSection('proyectos')"
+                    >Ver Proyectos</a>
+                    <a href="#contacto" class="btn btn-outline"
+                    (click)="scrollToSection('contacto')"
+                    >Contacto</a>
                 </div>
             </div>
             <div class="type1-image">
