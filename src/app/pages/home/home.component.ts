@@ -5,11 +5,13 @@ import { languageIcons, technologyIcons, TechIcon } from '../../data/tech-icons.
 import { socialNetworks } from '../../data/social-networks.data';
 import { animateNameRewrite } from './../../shared/functions/utils';
 import { ProjectsComponent } from '../projects/projects.component';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ProjectsComponent],
+  imports: [CommonModule, ProjectsComponent, ReactiveFormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -22,6 +24,20 @@ export class HomeComponent implements OnInit {
   languageIcons = languageIcons;
   technologyIcons = technologyIcons;
   socialNetworks = socialNetworks;
+
+  contactForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.contactForm = this.fb.group({
+      nombre: ['', [Validators.required, Validators.minLength(2)]],
+      apellido: ['', [Validators.required, Validators.minLength(2)]],
+      empresa: [''],
+      email: ['', [Validators.required, Validators.email]],
+      telefono: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
+      mensaje: ['', [Validators.required, Validators.maxLength(500)]],
+      aceptoPolitica: [false, Validators.requiredTrue]
+    });
+  }
 
   ngOnInit() {
     this.updateTechStack();
@@ -73,6 +89,19 @@ export class HomeComponent implements OnInit {
         setTimeout(() => this.runAnimation(), 5000);
       }
     );
+  }
+
+  onSubmit() {
+    if (this.contactForm.valid) {
+      // Aquí puedes implementar la lógica para enviar el correo
+      console.log(this.contactForm.value);
+      // Por ejemplo, podrías llamar a un servicio que maneje el envío de correos
+      // this.emailService.sendEmail(this.contactForm.value);
+
+      //Revisar https://github.com/lipis/flag-icons/tree/main/flags/4x3
+      //https://flagicons.lipis.dev/
+      //https://github.com/HatScripts/circle-flags
+    }
   }
 
 }
