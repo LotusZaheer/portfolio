@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project, projects } from '../../data/projects.data';
-import { languageIcons, technologyIcons, TechIcon } from '../../data/tech-icons.data';
+import { languageIcons, markupStyleIcons, libraryIcons, frameworkIcons, platformIcons, apiIcons, TechIcon } from '../../data/tech-icons.data';
 
 @Component({
   selector: 'app-projects',
@@ -16,7 +16,11 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   readonly CAROUSEL_INTERVAL = 3000;
   readonly PROGRESS_INTERVAL = 30;
   languageIcons = languageIcons;
-  technologyIcons = technologyIcons;
+  markupStyleIcons = markupStyleIcons;
+  libraryIcons = libraryIcons;
+  frameworkIcons = frameworkIcons;
+  platformIcons = platformIcons;
+  apiIcons = apiIcons
 
   readonly fallbackColors = [
     'linear-gradient(135deg, #004466 0%, #00778A 100%)',

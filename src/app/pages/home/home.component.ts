@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { projects } from '../../data/projects.data';
-import { languageIcons, technologyIcons, TechIcon } from '../../data/tech-icons.data';
+import { languageIcons, markupStyleIcons, libraryIcons, frameworkIcons, platformIcons, apiIcons, TechIcon } from '../../data/tech-icons.data';
 import { socialNetworks } from '../../data/social-networks.data';
 import { animateNameRewrite } from './../../shared/functions/utils';
 import { ProjectsComponent } from '../projects/projects.component';
@@ -20,10 +20,21 @@ export class HomeComponent implements OnInit {
   projects: any[] = projects;
 
   languages: string[] = [];
-  technologies: string[] = [];
+  markupStyles: string[] = [];
+  frameworks: string[] = [];
+  libraries: string[] = [];
+  platforms: string[] = [];
+  apis: string[] = [];
+
   languageIcons = languageIcons;
-  technologyIcons = technologyIcons;
+  markupStyleIcons = markupStyleIcons;
+  frameworkIcons = frameworkIcons;
+  libraryIcons = libraryIcons;
+  platformIcons = platformIcons;
+  apiIcons = apiIcons;
+
   socialNetworks = socialNetworks;
+
 
   contactForm: FormGroup;
 
@@ -50,16 +61,29 @@ export class HomeComponent implements OnInit {
 
   private updateTechStack() {
     const allLanguages = new Set<string>();
-    const allTechnologies = new Set<string>();
+    const allMarkup = new Set<string>();
+    const allFrameworks = new Set<string>();
+    const allLibraries = new Set<string>();
+    const allPlatforms = new Set<string>();
+    const allApis = new Set<string>();
 
     projects.forEach(project => {
-      project.languages.forEach(lang => allLanguages.add(lang));
-      project.technologies.forEach(tech => allTechnologies.add(tech));
+      project.languages?.forEach(l => allLanguages.add(l));
+      project.markupStyles?.forEach(m => allMarkup.add(m));
+      project.frameworks?.forEach(f => allFrameworks.add(f));
+      project.libraries?.forEach(lib => allLibraries.add(lib));
+      project.platforms?.forEach(p => allPlatforms.add(p));
+      project.apis?.forEach(a => allApis.add(a));
     });
 
     this.languages = Array.from(allLanguages).sort();
-    this.technologies = Array.from(allTechnologies).sort();
+    this.markupStyles = Array.from(allMarkup).sort();
+    this.frameworks = Array.from(allFrameworks).sort();
+    this.libraries = Array.from(allLibraries).sort();
+    this.platforms = Array.from(allPlatforms).sort();
+    this.apis = Array.from(allApis).sort();
   }
+
 
   getIcon(name: string, icons: TechIcon[]): string | null {
     const icon = icons.find(icon => icon.name === name);

@@ -15,7 +15,10 @@ export const languageIcons: TechIcon[] = [
     {
         name: 'C++',
         iconPath: 'assets/images/languages/c-plusplus.svg'
-    },
+    }
+];
+
+export const markupStyleIcons: TechIcon[] = [
     {
         name: 'HTML5',
         iconPath: 'assets/images/languages/html5.png'
@@ -24,21 +27,9 @@ export const languageIcons: TechIcon[] = [
         name: 'SCSS',
         iconPath: 'assets/images/languages/scss.png'
     }
-];
+]
 
-export const technologyIcons: TechIcon[] = [
-    {
-        name: 'Angular',
-        iconPath: 'assets/images/technologies/angular.svg'
-    },
-    {
-        name: 'Google Maps API',
-        iconPath: 'assets/images/technologies/maps-icon.svg'
-    },
-    {
-        name: 'OR-Tools',
-        iconPath: 'assets/images/technologies/or-tools.png'
-    },
+export const libraryIcons: TechIcon[] = [
     {
         name: 'Pandas',
         iconPath: 'assets/images/technologies/pandas.svg'
@@ -56,11 +47,33 @@ export const technologyIcons: TechIcon[] = [
         iconPath: 'assets/images/technologies/dask.svg'
     },
     {
-        name: 'ESRI',
-        iconPath: 'assets/images/technologies/esri.png'
+        name: 'OR-Tools',
+        iconPath: 'assets/images/technologies/or-tools.png'
     },
+]
+
+export const frameworkIcons: TechIcon[] = [
+    {
+        name: 'Angular',
+        iconPath: 'assets/images/technologies/angular.svg'
+    },
+]
+
+export const platformIcons: TechIcon[] = [
     {
         name: 'Docker',
         iconPath: 'assets/images/technologies/docker.png'
-    }
+    },
+    {
+        name: 'ESRI',
+        iconPath: 'assets/images/technologies/esri.png'
+    },
+]
+
+
+export const apiIcons: TechIcon[] = [
+    {
+        name: 'Google Maps API',
+        iconPath: 'assets/images/technologies/maps-icon.svg'
+    },
 ]; 
