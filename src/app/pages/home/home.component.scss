@@ -368,6 +368,7 @@
         gap: 0.5rem;
 
         .country-code {
+            flex: 0.1;
             color: $text-secondary;
             padding: 0.8rem;
             background-color: $background-dark;
@@ -376,7 +377,7 @@
         }
 
         input {
-            flex: 1;
+            flex: 0.9;
         }
     }
 
@@ -397,10 +398,6 @@
             cursor: not-allowed;
         }
     }
-}
-
-.social-networks {
-    margin-top: 2rem;
 }
 
 @media (max-width: 768px) {
