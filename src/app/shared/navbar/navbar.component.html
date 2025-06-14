@@ -5,19 +5,13 @@
         </div>
         <ul class="navbar-menu" [class.active]="mobileMenuOpen">
             <li><a href="#about" (click)="scrollToSection('about'); mobileMenuOpen = false"
-                    [class.active]="activeSection === 'about'">Sobre mi</a></li>
+                    [class.active]="activeSection === 'about'">{{ 'sections.about' | translate }}</a></li>
             <li><a href="#skills" (click)="scrollToSection('skills'); mobileMenuOpen = false"
-                    [class.active]="activeSection === 'skills'">Habilidades</a></li>
+                    [class.active]="activeSection === 'skills'">{{ 'sections.skills' | translate }}</a></li>
             <li><a href="#projects" (click)="scrollToSection('projects'); mobileMenuOpen = false"
-                    [class.active]="activeSection === 'projects'">Proyectos</a></li>
+                    [class.active]="activeSection === 'projects'">{{ 'sections.projects' | translate }}</a></li>
             <li><a href="#contact" (click)="scrollToSection('contact'); mobileMenuOpen = false"
-                    [class.active]="activeSection === 'contact'">Contacto</a></li>
-            <li *ngIf="!mobileMenuOpen" class="language-selector">
-                <div (click)="switchLanguage()" class="lang-switch">
-                    <button class="lang-btn" [class.active]="currentLang === 'es'">ES</button>
-                    <button class="lang-btn" [class.active]="currentLang === 'en'">EN</button>
-                </div>
-            </li>
+                    [class.active]="activeSection === 'contact'">{{ 'sections.contact' | translate }}</a></li>
         </ul>
         <div class="navbar-mobile-toggle" [class.active]="mobileMenuOpen" (click)="toggleMobileMenu()">
             <span></span>
@@ -33,4 +27,5 @@
             <button class="lang-btn" [class.active]="currentLang === 'en'">EN</button>
         </div>
     </div>
+
 </nav>

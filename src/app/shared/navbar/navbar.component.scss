@@ -124,11 +124,18 @@
     }
 
     &.mobile {
-        display: none;
+        width: 6rem;
+        display: block;
+            position: fixed;
+            right: 5px;
+            bottom: 35px;
+            transform: none;
+            z-index: 1000;
     }
 
     .lang-switch {
         display: flex;
+        flex-direction: row;
         background-color: $background-dark-75;
         border-radius: 8px;
         padding: 4px;
@@ -233,12 +240,7 @@
         }
 
         &.mobile {
-            display: block;
-            position: fixed;
-            right: 5px;
-            bottom: 35px;
-            transform: none;
-            z-index: 1000;
+            width: 3.5rem;
 
             .lang-switch {
                 flex-direction: column;

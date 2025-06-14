@@ -2,7 +2,8 @@
     <section id="about" class="type1">
         <div class="container">
             <div class="type1-content">
-                <h1>{{ 'home.greeting' | translate }} <span class="text-gradient">Andrés Uribe</span></h1>
+                <h1>{{ 'home.greeting' | translate }} <span class="text-gradient">{{ 'home.name' | translate }} </span>
+                </h1>
                 <h2>{{ 'home.title' | translate }}</h2>
                 <p class="type1-description">
                     {{ 'home.description' | translate }}
@@ -29,11 +30,11 @@
     </section>
 
     <section id="skills" class="type2">
-        <h2 class="section-title">Habilidades</h2>
+        <h2 class="section-title">{{ 'sections.skills' | translate }}</h2>
         <div class="tech-stack">
 
             <div class="tech-category">
-                <h3>Lenguajes</h3>
+                <h3>{{ 'skills.languages' | translate }}</h3>
                 <div class="tech-icons">
                     @for (lang of languages; track lang) {
                     <div class="tech-icon">
@@ -48,7 +49,7 @@
 
 
             <div class="tech-category">
-                <h3>Frameworks</h3>
+                <h3>{{ 'skills.frameworks' | translate }}</h3>
                 <div class="tech-icons">
                     @for (fw of frameworks; track fw) {
                     <div class="tech-icon">
@@ -62,7 +63,7 @@
             </div>
 
             <div class="tech-category">
-                <h3>Markup y Estilos</h3>
+                <h3>{{ 'skills.markupStyles' | translate }}</h3>
                 <div class="tech-icons">
                     @for (style of markupStyles; track style) {
                     <div class="tech-icon">
@@ -76,7 +77,7 @@
             </div>
 
             <div class="tech-category">
-                <h3>Librerías</h3>
+                <h3>{{ 'skills.libraries' | translate }}</h3>
                 <div class="tech-icons">
                     @for (lib of libraries; track lib) {
                     <div class="tech-icon">
@@ -90,7 +91,7 @@
             </div>
 
             <div class="tech-category">
-                <h3>Plataformas</h3>
+                <h3>{{ 'skills.platforms' | translate }}</h3>
                 <div class="tech-icons">
                     @for (plat of platforms; track plat) {
                     <div class="tech-icon">
@@ -104,7 +105,7 @@
             </div>
 
             <div class="tech-category">
-                <h3>APIs</h3>
+                <h3>{{ 'skills.apis' | translate }}</h3>
                 <div class="tech-icons">
                     @for (api of apis; track api) {
                     <div class="tech-icon">
@@ -116,70 +117,72 @@
                     }
                 </div>
             </div>
-
         </div>
     </section>
 
 
     <section id="projects" class="type1">
-        <h2 class="section-title">Proyectos</h2>
+        <h2 class="section-title">{{ 'sections.projects' | translate }}</h2>
         <app-projects></app-projects>
     </section>
-
+    
     <section id="contact" class="type2">
-        <h2 class="section-title">Contacto</h2>
+        <h2 class="section-title">{{ 'sections.contact' | translate }}</h2>
         <div class="contact-container">
             <form class="contact-form" action="https://formsubmit.co/andresfelipeuribe11@gmail.com" method="POST">
                 <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    <label for="nombre">{{ 'contact.name' | translate }}</label>
+                    <input type="text" id="nombre" name="nombre" required [placeholder]="'contact.name' | translate">
                 </div>
                 <div class="form-group">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido" name="apellido" required placeholder="Tu apellido">
+                    <label for="apellido">{{ 'contact.lastName' | translate }}</label>
+                    <input type="text" id="apellido" name="apellido" required
+                        [placeholder]="'contact.lastName' | translate">
                 </div>
                 <div class="form-group">
-                    <label for="empresa">Empresa</label>
-                    <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
+                    <label for="empresa">{{ 'contact.company' | translate }}</label>
+                    <input type="text" id="empresa" name="empresa" [placeholder]="'contact.company' | translate">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    <label for="email">{{ 'contact.email' | translate }}</label>
+                    <input type="email" id="email" name="email" required [placeholder]="'contact.email' | translate">
                 </div>
                 <div class="form-group">
-                    <label for="telefono">Teléfono</label>
+                    <label for="telefono">{{ 'contact.phone' | translate }}</label>
                     <div class="phone-input">
                         <span class="country-code">+57</span>
-                        <input type="tel" id="telefono" name="telefono" required placeholder="3011234567">
+                        <input type="tel" id="telefono" name="telefono" required
+                            [placeholder]="'contact.phone' | translate">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" required placeholder="Tu mensaje" maxlength="500"></textarea>
+                    <label for="mensaje">{{ 'contact.message' | translate }}</label>
+                    <textarea id="mensaje" name="mensaje" required [placeholder]="'contact.messagePlaceholder' | translate"
+                        maxlength="500"></textarea>
                 </div>
                 <div class="form-group checkbox">
                     <input type="checkbox" id="politica" name="aceptoPolitica" required>
-                    <label for="politica">Acepto la política de tratamiento de datos personales</label>
+                    <label for="politica">{{ 'contact.policy' | translate }}</label>
                 </div>
-
-                <!-- Opcionales para redirección o control -->
+    
                 <input type="hidden" name="_next" value="https://lotuszaheer.github.io/#contact">
                 <input type="hidden" name="_captcha" value="false">
-
-                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+    
+                <button type="submit" class="btn btn-primary">{{ 'contact.send' | translate }}</button>
             </form>
-
+    
             <div class="tech-category">
                 <div class="tech-icons">
                     @for (network of socialNetworks; track network.name) {
                     <a class="tech-icon" [href]="network.url" target="_blank">
                         <img [src]="network.iconPath" [alt]="network.name" class="tech-image">
-                        <span> {{ network.name }}</span>
+                        <span>{{ network.name }}</span>
                     </a>
                     }
                 </div>
             </div>
         </div>
     </section>
+    
 
 </main>
