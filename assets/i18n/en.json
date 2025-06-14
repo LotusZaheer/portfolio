@@ -1,0 +1,9 @@
+{
+    "home": {
+        "greeting": "Hi! I'm",
+        "title": "Web Developer",
+        "description": "I'm a systems engineer with experience in data analysis and software development to solve geospatial challenges. Skilled in data processing with Python, C++, and SQL, using tools like pandas, numpy, scipy, or-tools, among others. Extensive experience in web development using technologies such as Angular, Node.js, FastAPI, and React.",
+        "viewProjects": "View Projects",
+        "contact": "Contact"
+    }
+}

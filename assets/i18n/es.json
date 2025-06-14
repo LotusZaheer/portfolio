@@ -1,0 +1,9 @@
+{
+    "home": {
+        "greeting": "¡Hola! Soy",
+        "title": "Desarrollador Web",
+        "description": "Soy ingeniero de sistemas con experiencia en análisis de datos y desarrollo de software para resolver desafíos geoespaciales. Con conocimientos en procesamiento de datos con Python, C++ y SQL, utilizando herramientas como pandas, numpy, scipy, or-tools, entre otras. Con amplia experiencia en desarrollo web utilizando tecnologías como Angular, Node.js, FastAPI y React.",
+        "viewProjects": "Ver Proyectos",
+        "contact": "Contacto"
+    }
+}
