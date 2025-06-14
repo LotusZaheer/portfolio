@@ -12,11 +12,25 @@
                     [class.active]="activeSection === 'projects'">Proyectos</a></li>
             <li><a href="#contact" (click)="scrollToSection('contact'); mobileMenuOpen = false"
                     [class.active]="activeSection === 'contact'">Contacto</a></li>
+            <li *ngIf="!mobileMenuOpen" class="language-selector">
+                <div (click)="switchLanguage()" class="lang-switch">
+                    <button class="lang-btn" [class.active]="currentLang === 'es'">ES</button>
+                    <button class="lang-btn" [class.active]="currentLang === 'en'">EN</button>
+                </div>
+            </li>
         </ul>
         <div class="navbar-mobile-toggle" [class.active]="mobileMenuOpen" (click)="toggleMobileMenu()">
             <span></span>
             <span></span>
             <span></span>
+        </div>
+    </div>
+
+    <!-- Selector de idiomas para móvil -->
+    <div class="language-selector mobile">
+        <div (click)="switchLanguage()" class="lang-switch">
+            <button class="lang-btn" [class.active]="currentLang === 'es'">ES</button>
+            <button class="lang-btn" [class.active]="currentLang === 'en'">EN</button>
         </div>
     </div>
 </nav>

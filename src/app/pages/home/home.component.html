@@ -2,23 +2,18 @@
     <section id="about" class="type1">
         <div class="container">
             <div class="type1-content">
-                <h1>¡Hola! Soy <span class="text-gradient">Andrés Uribe</span></h1>
-                <h2>Desarrollador Web</h2>
+                <h1>{{ 'home.greeting' | translate }} <span class="text-gradient">Andrés Uribe</span></h1>
+                <h2>{{ 'home.title' | translate }}</h2>
                 <p class="type1-description">
-
-                    Soy ingeniero de sistemas con experiencia en análisis de datos y desarrollo de software para
-                    resolver
-                    desafíos geoespaciales.
-                    Con conocimientos en procesamiento de datos con Python, C++ y SQL, utilizando herramientas como
-                    pandas,
-                    numpy, scipy, or-tools, entre otras.
-                    Con amplia experiencia en desarrollo web utilizando tecnologías como Angular, Node.js, FastAPI y
-                    React.
+                    {{ 'home.description' | translate }}
                 </p>
                 <div class="type1-buttons">
-                    <a href="#projects" class="btn btn-primary" (click)="scrollToSection('projects')">Ver
-                        Proyectos</a>
-                    <a href="#contact" class="btn btn-outline" (click)="scrollToSection('contact')">Contacto</a>
+                    <a href="#projects" class="btn btn-primary" (click)="scrollToSection('projects')">
+                        {{ 'home.viewProjects' | translate }}
+                    </a>
+                    <a href="#contact" class="btn btn-outline" (click)="scrollToSection('contact')">
+                        {{ 'home.contact' | translate }}
+                    </a>
                 </div>
             </div>
             <div class="type1-image">
@@ -30,6 +25,7 @@
                 </div>
             </div>
         </div>
+
     </section>
 
     <section id="skills" class="type2">

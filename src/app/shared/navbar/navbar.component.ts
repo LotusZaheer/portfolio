@@ -2,11 +2,13 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { animateNameRewrite } from './../functions/utils';
 import { ScrollService } from '../services/scroll.service';
 import { Subscription } from 'rxjs';
+import { CommonModule } from '@angular/common';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
@@ -14,11 +16,14 @@ export class NavbarComponent implements OnInit, OnDestroy {
   mobileMenuOpen = false;
   activeSection = 'about';
   private subscription: Subscription;
+  displayName = 'Andrés Uribe';
+  currentLang: string;
 
-  constructor(private scrollService: ScrollService) {
+  constructor(private scrollService: ScrollService, private translate: TranslateService) {
     this.subscription = this.scrollService.activeSection$.subscribe(
       section => this.activeSection = section
     );
+    this.currentLang = translate.currentLang || 'es';
   }
 
   toggleMobileMenu() {
@@ -30,12 +35,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      this.activeSection = sectionId;
     }
   }
 
   nameA = 'Andrés Uribe';
   nameB = '@LotusZaheer';
-  displayName = '';
   private currentName = '';
   private targetName = '';
   private blinkChar = '■';
@@ -60,6 +65,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
         setTimeout(() => this.runAnimation(), 5000);
       }
     );
+  }
+
+  switchLanguage() {
+    const newLang = this.currentLang === 'es' ? 'en' : 'es';
+    this.currentLang = newLang;
+    this.translate.use(newLang);
   }
 
   ngOnDestroy() {

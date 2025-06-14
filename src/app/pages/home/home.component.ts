@@ -7,11 +7,17 @@ import { animateNameRewrite } from './../../shared/functions/utils';
 import { ProjectsComponent } from '../projects/projects.component';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ProjectsComponent, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    ProjectsComponent,
+    ReactiveFormsModule,
+    TranslateModule
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -38,7 +44,7 @@ export class HomeComponent implements OnInit {
 
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private translate: TranslateService) {
     this.contactForm = this.fb.group({
       nombre: ['', [Validators.required, Validators.minLength(2)]],
       apellido: ['', [Validators.required, Validators.minLength(2)]],
@@ -48,6 +54,12 @@ export class HomeComponent implements OnInit {
       mensaje: ['', [Validators.required, Validators.maxLength(500)]],
       aceptoPolitica: [false, Validators.requiredTrue]
     });
+
+    // Establecer el idioma por defecto
+    translate.setDefaultLang('es');
+    // Usar el idioma del navegador si está disponible, de lo contrario usar español
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang?.match(/es|en/) ? browserLang : 'es');
   }
 
   ngOnInit() {
