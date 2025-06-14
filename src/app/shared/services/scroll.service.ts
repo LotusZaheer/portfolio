@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
     providedIn: 'root'
 })
 export class ScrollService {
-    private activeSection = new BehaviorSubject<string>('inicio');
+    private activeSection = new BehaviorSubject<string>('about');
     activeSection$ = this.activeSection.asObservable();
 
     constructor() {
@@ -14,7 +14,7 @@ export class ScrollService {
 
     private setupScrollListener() {
         window.addEventListener('scroll', () => {
-            const sections = ['inicio', 'sobre-mi', 'proyectos', 'contacto'];
+            const sections = ['about', 'skills', 'projects', 'contact'];
             const scrollPosition = window.scrollY + window.innerHeight / 3;
 
             for (const section of sections) {

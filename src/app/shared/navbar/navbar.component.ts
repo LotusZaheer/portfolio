@@ -12,7 +12,7 @@ import { Subscription } from 'rxjs';
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   mobileMenuOpen = false;
-  activeSection = 'inicio';
+  activeSection = 'about';
   private subscription: Subscription;
 
   constructor(private scrollService: ScrollService) {

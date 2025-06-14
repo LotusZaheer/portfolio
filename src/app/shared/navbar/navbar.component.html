@@ -4,14 +4,14 @@
             <a><span>{{ displayName }}</span></a>
         </div>
         <ul class="navbar-menu" [class.active]="mobileMenuOpen">
-            <li><a href="#inicio" (click)="scrollToSection('inicio'); mobileMenuOpen = false"
-                    [class.active]="activeSection === 'inicio'">Inicio</a></li>
-            <li><a href="#sobre-mi" (click)="scrollToSection('sobre-mi'); mobileMenuOpen = false"
-                    [class.active]="activeSection === 'sobre-mi'">Sobre mi</a></li>
-            <li><a href="#proyectos" (click)="scrollToSection('proyectos'); mobileMenuOpen = false"
-                    [class.active]="activeSection === 'proyectos'">Proyectos</a></li>
-            <li><a href="#contacto" (click)="scrollToSection('contacto'); mobileMenuOpen = false"
-                    [class.active]="activeSection === 'contacto'">Contacto</a></li>
+            <li><a href="#about" (click)="scrollToSection('about'); mobileMenuOpen = false"
+                    [class.active]="activeSection === 'about'">Sobre mi</a></li>
+            <li><a href="#skills" (click)="scrollToSection('skills'); mobileMenuOpen = false"
+                    [class.active]="activeSection === 'skills'">Habilidades</a></li>
+            <li><a href="#projects" (click)="scrollToSection('projects'); mobileMenuOpen = false"
+                    [class.active]="activeSection === 'projects'">Proyectos</a></li>
+            <li><a href="#contact" (click)="scrollToSection('contact'); mobileMenuOpen = false"
+                    [class.active]="activeSection === 'contact'">Contacto</a></li>
         </ul>
         <div class="navbar-mobile-toggle" [class.active]="mobileMenuOpen" (click)="toggleMobileMenu()">
             <span></span>
