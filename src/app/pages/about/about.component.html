@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="type1-content">
+        <h1>{{ 'home.greeting' | translate }} <span class="text-gradient">{{ 'home.name' | translate }}</span></h1>
+        <h2>{{ 'home.title' | translate }}</h2>
+        <p class="type1-description">
+            {{ 'home.description' | translate }}
+        </p>
+        <div class="type1-buttons">
+            <a href="#projects" class="btn btn-primary" (click)="scrollToSection('projects')">
+                {{ 'home.viewProjects' | translate }}
+            </a>
+            <a href="#contact" class="btn btn-outline" (click)="scrollToSection('contact')">
+                {{ 'home.contact' | translate }}
+            </a>
+        </div>
+    </div>
+    <div class="type1-image">
+        <div class="image-container">
+            <div class="profile-placeholder">
+                <img src="https://avatars.githubusercontent.com/u/53977185?v=4" alt="Andrés Uribe"
+                    class="profile-image">
+            </div>
+        </div>
+    </div>
+</div>
