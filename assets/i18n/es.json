@@ -1,9 +1,36 @@
 {
     "home": {
         "greeting": "¡Hola! Soy",
+        "name": "Andrés Uribe",
         "title": "Desarrollador Web",
         "description": "Soy ingeniero de sistemas con experiencia en análisis de datos y desarrollo de software para resolver desafíos geoespaciales. Con conocimientos en procesamiento de datos con Python, C++ y SQL, utilizando herramientas como pandas, numpy, scipy, or-tools, entre otras. Con amplia experiencia en desarrollo web utilizando tecnologías como Angular, Node.js, FastAPI y React.",
         "viewProjects": "Ver Proyectos",
         "contact": "Contacto"
+    },
+    "sections": {
+        "about": "Sobre mi",
+        "skills": "Habilidades",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+    },
+"skills": {
+    "title": "Habilidades",
+    "languages": "Lenguajes",
+    "frameworks": "Frameworks",
+    "markupStyles": "Markup y Estilos",
+    "libraries": "Librerías",
+    "platforms": "Plataformas",
+    "apis": "APIs"
+},
+    "contact": {
+        "name": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo electrónico",
+        "company": "Empresa",
+        "message": "Mensaje",
+        "phone": "Teléfono",
+        "messagePlaceholder": "Escribe tu mensaje aquí...",
+        "policy": "Acepto el tratamiento de mis datos personales de acuerdo con la política de privacidad.",
+        "send": "Enviar mensaje"
     }
 }
