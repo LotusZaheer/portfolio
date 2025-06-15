@@ -38,5 +38,17 @@
         "messagePlaceholder": "Escribe tu mensaje aquí...",
         "policy": "Acepto el tratamiento de mis datos personales de acuerdo con la política de privacidad.",
         "send": "Enviar mensaje"
+    },
+    "projects": {
+        "beatride": {
+            "title": "Beatride – Plataforma de Ruteo Comercial y Logístico",
+            "description": "Beatride es una plataforma orientada a optimizar el Route to Market (RTM), permitiendo la creación de rutas eficientes para equipos comerciales y logísticos. Participé en el desarrollo frontend con Angular e integración optimizada de Google Maps. También desarrollé scripts para el backend en C++ (usando OR-Tools) e integrados con Python mediante ctypes, para realizar cálculos logísticos basados en datos geoespaciales.",
+            "role": "Desarrollador Full Stack"
+        },
+        "fampas": {
+            "title": "FAMPAS - Fundación Adulto Mayor y Parkinson Santander",
+            "description": "Desarrollo del frontend de la página institucional usando Angular. Implementé componentes reutilizables, estilos responsivos en SCSS y gestión modular de rutas. Se utilizó Docker para entornos de desarrollo consistentes y despliegue simplificado",
+            "role": "Desarrollador Frontend"
+        }
     }
 }
