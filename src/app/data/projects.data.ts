@@ -22,8 +22,8 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 0,
-    title: 'Beatride – Plataforma de Ruteo Comercial y Logístico',
-    description: 'Beatride es una plataforma orientada a optimizar el Route to Market (RTM), permitiendo la creación de rutas eficientes para equipos comerciales y logísticos. Participé en el desarrollo frontend con Angular e integración optimizada de Google Maps. También desarrollé scripts para el backend en C++ (usando OR-Tools) e integrados con Python mediante ctypes, para realizar cálculos logísticos basados en datos geoespaciales.',
+    title: 'projects.beatride.title',
+    description: 'projects.beatride.description',
     frameworks: ['Angular'],
     apis: ['Google Maps API'],
     libraries: ['OR-Tools', 'Pandas', 'GeoPandas', 'Numpy', 'Dask'],
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     markupStyles: ['SCSS', 'HTML5'],
     company: 'OrusXpert SAS',
     companyUrl: 'https://orusxpert.co',
-    role: 'Desarrollador Full Stack',
+    role: 'projects.beatride.role',
     images: [
       './assets/images/projects/beatridemap-1.png',
       './assets/images/projects/beatridemap-2.png',
@@ -57,15 +57,15 @@ export const projects: Project[] = [
 
   {
     id: 1,
-    title: 'FAMPAS - Fundación Adulto Mayor y Parkinson Santander',
-    description: 'Desarrollo del frontend de la página institucional usando Angular. Implementé componentes reutilizables, estilos responsivos en SCSS y gestión modular de rutas. Se utilizó Docker para entornos de desarrollo consistentes y despliegue simplificado',
+    title: 'projects.fampas.title',
+    description: 'projects.fampas.description',
     frameworks: ['Angular'],
     platforms: ['Docker'],
     languages: ['TypeScript'],
     markupStyles: ['SCSS', 'HTML5'],
     company: 'OrusXpert SAS',
     companyUrl: 'https://orusxpert.co',
-    role: 'Desarrollador Frontend',
+    role: 'projects.fampas.role',
     images: [
       './assets/images/projects/fundacionfampas.png',
     ],
