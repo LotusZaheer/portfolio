@@ -13,16 +13,22 @@
         "projects": "Projects",
         "contact": "Contact"
     },
-"skills": {
-    "title": "Skills",
-    "languages": "Languages",
-    "frameworks": "Frameworks",
-    "markupStyles": "Markup & Styles",
-    "libraries": "Libraries",
-    "platforms": "Platforms",
-    "apis": "APIs"
-},
-    "contact":{
+    "skills": {
+        "title": "Skills",
+        "languages": "Languages",
+        "frameworks": "Frameworks",
+        "markupStyles": "Markup & Styles",
+        "libraries": "Libraries",
+        "platforms": "Platforms",
+        "apis": "APIs"
+    },
+    "others": {
+        "company": "Company",
+        "role": "Role",
+        "viewSite": "View site",
+        "viewCode": "View code"
+    },
+    "contact": {
         "name": "Name",
         "lastName": "Last Name",
         "email": "Email",

@@ -13,15 +13,21 @@
         "projects": "Proyectos",
         "contact": "Contacto"
     },
-"skills": {
-    "title": "Habilidades",
-    "languages": "Lenguajes",
-    "frameworks": "Frameworks",
-    "markupStyles": "Markup y Estilos",
-    "libraries": "Librerías",
-    "platforms": "Plataformas",
-    "apis": "APIs"
-},
+    "skills": {
+        "title": "Habilidades",
+        "languages": "Lenguajes",
+        "frameworks": "Frameworks",
+        "markupStyles": "Markup y Estilos",
+        "libraries": "Librerías",
+        "platforms": "Plataformas",
+        "apis": "APIs"
+    },
+    "others": {
+        "company": "Compañía",
+        "role": "Rol",
+        "viewSite": "Ver sitio",
+        "viewCode": "Ver código"
+    },
     "contact": {
         "name": "Nombre",
         "lastName": "Apellido",
