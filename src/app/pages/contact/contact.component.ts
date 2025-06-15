@@ -32,9 +32,7 @@ export class ContactComponent implements OnInit {
     }
 
     ngOnInit() {
-        // Establecer el idioma por defecto
         this.translate.setDefaultLang('es');
-        // Usar el idioma del navegador si está disponible, de lo contrario usar español
         const browserLang = this.translate.getBrowserLang();
         this.translate.use(browserLang?.match(/es|en/) ? browserLang : 'es');
     }
