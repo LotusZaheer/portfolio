@@ -199,14 +199,14 @@
 
         padding: 0.5rem 1rem;
         text-align: center;
-        background: #0F5FA6;
+        background: $secondary-color;
         color: #FFFFFF;
         text-decoration: none;
         border-radius: 4px;
         transition: background-color 0.3s ease;
 
         &:hover {
-            background: $secondary-color;
+            background: $accent-color;
         }
     }
 }

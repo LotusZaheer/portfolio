@@ -16,13 +16,13 @@
                 <div class="project-links">
                     @if (project.liveUrl) {
                     <a [href]="project.liveUrl" target="_blank" class="link-button">
-                        {{project.liveName}}
+                        {{ 'others.viewSite' | translate }}
                     </a>
                     }
 
                     @if (project.repoUrl) {
                     <a [href]="project.repoUrl" target="_blank" class="link-button">
-                        {{project.repoName}}
+                        {{ 'others.viewCode' | translate }}
                     </a>
                     }
                 </div>
@@ -41,7 +41,7 @@
 
 
                 <div class="detail-section" *ngIf="project.company">
-                    <h4>Empresa</h4>
+                    <h4>{{ 'others.company' | translate }}</h4>
                     <a *ngIf="project.companyUrl; else noLink" [href]="project.companyUrl" target="_blank"
                         rel="noopener noreferrer">
                         {{ project.company }}
@@ -53,13 +53,13 @@
 
 
                 <div class="detail-section">
-                    <h4>Rol</h4>
+                    <h4>{{ 'others.role' | translate }}</h4>
                     <p>{{ project.role }}</p>
                 </div>
 
                 <!-- Lenguajes -->
                 <div class="detail-section">
-                    <h4>Lenguajes</h4>
+                    <h4>{{ 'skills.languages' | translate }}</h4>
                     <div class="tags">
                         @for (lang of project.languages; track lang) {
                         <span class="tag">
@@ -74,7 +74,7 @@
 
                 <!-- Frameworks -->
                 <div class="detail-section" *ngIf="project.frameworks?.length">
-                    <h4>Frameworks</h4>
+                    <h4>{{ 'skills.frameworks' | translate }}</h4>
                     <div class="tags">
                         @for (fw of project.frameworks; track fw) {
                         <span class="tag">
@@ -90,7 +90,7 @@
 
                 <!-- Marcas y estilos -->
                 <div class="detail-section">
-                    <h4>Markup y Estilos</h4>
+                    <h4>{{ 'skills.markupStyles' | translate }}</h4>
                     <div class="tags">
                         @for (style of project.markupStyles; track style) {
                         <span class="tag">
@@ -105,7 +105,7 @@
 
                 <!-- Librerías -->
                 <div class="detail-section" *ngIf="project.libraries?.length">
-                    <h4>Librerías</h4>
+                    <h4>{{ 'skills.libraries' | translate }}</h4>
                     <div class="tags">
                         @for (lib of project.libraries; track lib) {
                         <span class="tag">
@@ -120,7 +120,7 @@
 
                 <!-- Plataformas -->
                 <div class="detail-section" *ngIf="project.platforms?.length">
-                    <h4>Plataformas</h4>
+                    <h4>{{ 'skills.platforms' | translate }}</h4>
                     <div class="tags">
                         @for (plat of project.platforms; track plat) {
                         <span class="tag">
@@ -135,7 +135,7 @@
 
                 <!-- APIs -->
                 <div class="detail-section" *ngIf="project.apis?.length">
-                    <h4>APIs</h4>
+                    <h4>{{ 'skills.apis' | translate }}</h4>
                     <div class="tags">
                         @for (api of project.apis; track api) {
                         <span class="tag">
@@ -147,7 +147,6 @@
                         }
                     </div>
                 </div>
-
 
             </div>
         </div>

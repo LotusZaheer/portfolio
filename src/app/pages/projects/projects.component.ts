@@ -1,12 +1,16 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { Project, projects } from '../../data/projects.data';
 import { languageIcons, markupStyleIcons, libraryIcons, frameworkIcons, platformIcons, apiIcons, TechIcon } from '../../data/tech-icons.data';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    TranslateModule
+  ],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })

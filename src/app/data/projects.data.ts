@@ -13,9 +13,7 @@ export interface Project {
   role: string;
   images: string[];
   liveUrl?: string;
-  liveName?: string;
   repoUrl?: string;
-  repoName?: string;
   featured: boolean;
   currentImageIndex: number;
   progress: number;
@@ -52,7 +50,6 @@ export const projects: Project[] = [
       './assets/images/projects/beatridemap-14.png',
     ],
     liveUrl: 'https://beatride.co',
-    liveName: 'Ir a Beatride',
     featured: true,
     currentImageIndex: 0,
     progress: 0
@@ -73,7 +70,6 @@ export const projects: Project[] = [
       './assets/images/projects/fundacionfampas.png',
     ],
     liveUrl: 'https://fundacionfampas.com/',
-    liveName: 'Ir a Fampas',
     featured: true,
     currentImageIndex: 0,
     progress: 0
