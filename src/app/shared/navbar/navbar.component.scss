@@ -2,7 +2,7 @@
 @use "../../../styles/_variables" as *;
 
 .navbar {
-    background-color: $background-dark-75;
+    background-color: $background-dark-95;
     color: $text-primary;
     position: fixed;
     top: 0;
@@ -24,7 +24,7 @@
 }
 
 .navbar-logo {
-    font-size: map-get($font-sizes, 'xl');
+    font-size: $size-xl;
     font-weight: 700;
 
     a {
@@ -54,7 +54,7 @@
         a {
             color: $text-secondary;
             text-decoration: none;
-            font-size: map-get($font-sizes, 'md');
+            font-size: $size-md;
             font-weight: 500;
             padding: 0.5rem 0;
             position: relative;
@@ -174,7 +174,7 @@
         background: none;
         border: none;
         color: $text-secondary;
-        font-size: map-get($font-sizes, 'sm');
+        font-size: $size-sm;
         font-weight: 500;
         padding: 6px 12px;
         cursor: pointer;
@@ -225,7 +225,7 @@
             margin: 1rem 0;
 
             a {
-                font-size: map-get($font-sizes, 'lg');
+                font-size: $size-lg;
             }
         }
     }
@@ -258,7 +258,7 @@
 
             .lang-btn {
                 padding: 8px 12px;
-                font-size: map-get($font-sizes, 'sm');
+                font-size: $size-sm;
             }
 
             // Ajustar la posición del indicador para la disposición vertical

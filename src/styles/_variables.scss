@@ -1,29 +1,17 @@
 @use "sass:color";
 
 // Sistema Tipográfico
-$font-sizes: (
-    'xs': 0.7rem,
-    // 11.2px
-    'sm': 0.8rem,
-    // 12.8px
-    'base': 1rem,
-    // 16px
-    'md': 1.1rem,
-    // 17.6px
-    'lg': 1.2rem,
-    // 19.2px
-    'xl': 1.5rem,
-    // 24px
-    '2xl': 2rem,
-    // 32px
-    '3xl': 2.5rem,
-    // 40px
-    '4xl': 3rem,
-    // 48px
-    '5xl': 4rem,
-    // 64px
-    '6xl': 6rem // 96px
-);
+$size-xs: 0.7rem;
+$size-sm: 0.8rem;
+$size-base: 1rem;
+$size-md: 1.1rem;
+$size-lg: 1.2rem;
+$size-xl: 1.5rem;
+$size-2xl: 2rem;
+$size-3xl: 2.5rem;
+$size-4xl: 3rem;
+$size-5xl: 4rem;
+$size-6xl: 6rem;
 
 @mixin font-size($size) {
     font-size: map-get($font-sizes, $size);
@@ -39,6 +27,7 @@ $sub-highlight-color: #F23827;
 // Colores de fondo
 $background-dark: #000; // Fondo principal
 $background-dark-75: #000000C0; // Fondo principal
+$background-dark-95: #000000F0; // Fondo principal
 $background-card: #1A1A1A; // Fondo de tarjetas
 $background-card-50: #1A1A1A80; // Fondo de tarjetas
 $background-light: color.adjust($background-dark, $lightness: 5.5%);
