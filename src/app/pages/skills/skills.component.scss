@@ -2,7 +2,7 @@
 
 .section-title {
     color: $text-primary;
-    font-size: 2.5rem;
+    font-size: map-get($font-sizes, '3xl');
     margin-bottom: 2rem;
     text-align: center;
     position: relative;
@@ -28,7 +28,7 @@
 
 .tech-category {
     h3 {
-        font-size: 1.5rem;
+        font-size: map-get($font-sizes, 'xl');
         margin-bottom: 1.5rem;
         text-align: center;
     }
@@ -61,7 +61,7 @@
 
     span {
         color: $text-secondary;
-        font-size: 0.9rem;
+        font-size: map-get($font-sizes, 'sm');
     }
 
     &:hover {
@@ -75,7 +75,7 @@
 // Responsive Design
 @media (max-width: 768px) {
     .section-title {
-        font-size: 2rem;
+        font-size: map-get($font-sizes, '2xl');
     }
 
     .tech-icons {
@@ -86,11 +86,11 @@
         padding: 0.6rem 1.2rem;
 
         i {
-            font-size: 1.3rem;
+            font-size: map-get($font-sizes, 'xl');
         }
 
         span {
-            font-size: 0.8rem;
+            font-size: map-get($font-sizes, 'sm');
         }
     }
 }
@@ -100,11 +100,11 @@
         padding: 0.5rem 1rem;
 
         i {
-            font-size: 1.2rem;
+            font-size: map-get($font-sizes, 'lg');
         }
 
         span {
-            font-size: 0.7rem;
+            font-size: map-get($font-sizes, 'xs');
         }
     }
 }

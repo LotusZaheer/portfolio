@@ -9,7 +9,7 @@
 
 .section-title {
     color: $text-primary;
-    font-size: 2rem;
+    font-size: map-get($font-sizes, '2xl');
     margin-bottom: 2rem;
     text-align: center;
     background: $gradient-primary;
@@ -84,7 +84,7 @@
         background: transparent;
 
         .project-initial {
-            font-size: 6rem;
+            font-size: map-get($font-sizes, '6xl');
             font-weight: bold;
             color: rgba(255, 255, 255, 0.2);
             text-transform: uppercase;
@@ -125,7 +125,7 @@
 
 .project-title {
     color: $text-primary;
-    font-size: 1.5rem;
+    font-size: map-get($font-sizes, 'xl');
     margin-bottom: 1rem;
 }
 
@@ -145,7 +145,7 @@
         h4 {
             color: $text-primary;
             margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            font-size: map-get($font-sizes, 'md');
         }
 
         p {
@@ -168,7 +168,7 @@
         background: $background-light;
         padding: 0.3rem 0.8rem;
         border-radius: $border-radius;
-        font-size: 0.9rem;
+        font-size: map-get($font-sizes, 'sm');
         display: flex;
         align-items: center;
         gap: 0.5rem;
@@ -227,18 +227,18 @@
     }
 
     .project-title {
-        font-size: 1.3rem;
+        font-size: map-get($font-sizes, 'lg');
     }
 
     .project-image-carousel {
         .fallback-content .project-initial {
-            font-size: 4rem;
+            font-size: map-get($font-sizes, '5xl');
         }
     }
 
     .tags {
         .tag {
-            font-size: 0.8rem;
+            font-size: map-get($font-sizes, 'xs');
         }
     }
 }

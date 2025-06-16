@@ -16,24 +16,24 @@
     flex: 1;
 
     h1 {
-        font-size: 4rem;
+        font-size: map-get($font-sizes, '5xl');
         margin-bottom: 1rem;
 
         @media (max-width: 768px) {
-            font-size: 3rem;
+            font-size: map-get($font-sizes, '4xl');
             min-width: 330px;
         }
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: map-get($font-sizes, '2xl');
         color: $primary-color;
         margin-bottom: 1.5rem;
         font-weight: 400;
     }
 
     .type1-description {
-        font-size: 1.2rem;
+        font-size: map-get($font-sizes, 'lg');
         margin-bottom: 2rem;
         max-width: 500px;
         color: $text-secondary;

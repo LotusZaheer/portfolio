@@ -24,7 +24,7 @@
 }
 
 .navbar-logo {
-    font-size: 1.5rem;
+    font-size: map-get($font-sizes, 'xl');
     font-weight: 700;
 
     a {
@@ -54,7 +54,7 @@
         a {
             color: $text-secondary;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: map-get($font-sizes, 'md');
             font-weight: 500;
             padding: 0.5rem 0;
             position: relative;
@@ -126,11 +126,11 @@
     &.mobile {
         width: 6rem;
         display: block;
-            position: fixed;
-            right: 5px;
-            bottom: 35px;
-            transform: none;
-            z-index: 1000;
+        position: fixed;
+        right: 5px;
+        bottom: 35px;
+        transform: none;
+        z-index: 1000;
     }
 
     .lang-switch {
@@ -174,7 +174,7 @@
         background: none;
         border: none;
         color: $text-secondary;
-        font-size: 0.9rem;
+        font-size: map-get($font-sizes, 'sm');
         font-weight: 500;
         padding: 6px 12px;
         cursor: pointer;
@@ -225,7 +225,7 @@
             margin: 1rem 0;
 
             a {
-                font-size: 1.2rem;
+                font-size: map-get($font-sizes, 'lg');
             }
         }
     }
@@ -258,7 +258,7 @@
 
             .lang-btn {
                 padding: 8px 12px;
-                font-size: 0.9rem;
+                font-size: map-get($font-sizes, 'sm');
             }
 
             // Ajustar la posición del indicador para la disposición vertical

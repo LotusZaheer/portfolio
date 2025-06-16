@@ -1,5 +1,34 @@
 @use "sass:color";
 
+// Sistema Tipográfico
+$font-sizes: (
+    'xs': 0.7rem,
+    // 11.2px
+    'sm': 0.8rem,
+    // 12.8px
+    'base': 1rem,
+    // 16px
+    'md': 1.1rem,
+    // 17.6px
+    'lg': 1.2rem,
+    // 19.2px
+    'xl': 1.5rem,
+    // 24px
+    '2xl': 2rem,
+    // 32px
+    '3xl': 2.5rem,
+    // 40px
+    '4xl': 3rem,
+    // 48px
+    '5xl': 4rem,
+    // 64px
+    '6xl': 6rem // 96px
+);
+
+@mixin font-size($size) {
+    font-size: map-get($font-sizes, $size);
+}
+
 // Colores principales (Acentos)
 $primary-color: #0F5FA6;
 $secondary-color: #0A8CBF;
