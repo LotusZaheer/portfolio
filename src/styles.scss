@@ -20,6 +20,46 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   font-size: $size-base;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Tema claro
+body.light-theme {
+  background-color: #fff;
+  color: #000;
+
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  .card {
+    background-color: #e5e5e5;
+  }
+
+  .tech-icon {
+    background-color: #fff;
+    border-color: #e5e5e5;
+  }
+
+  .project-card {
+    background-color: #e5e5e5;
+  }
+
+  .section-title::after {
+    background: linear-gradient(90deg, #A6170F, #D95404, #BF310A, #A6170F);
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #A6170F, #D95404, #BF310A, #A6170F);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .text-gradient-highlight {
+    background: linear-gradient(90deg, #2768F2, #0549F2, #2768F2);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
 }
 
 h1,

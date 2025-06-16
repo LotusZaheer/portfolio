@@ -1,0 +1,22 @@
+@use "sass:color";
+
+$primary-color: #A6170F;
+$secondary-color: #BF310A;
+$accent-color: #D95404;
+$highlight-color: #0549F2;
+$sub-highlight-color: #2768F2;
+
+$background-dark: #fff;
+$background-dark-75: #ffffffC0;
+$background-dark-95: #ffffffF0;
+$background-card: #e5e5e5;
+$background-card-50: #e5e5e580;
+
+$background-light: color.adjust($background-dark, $lightness: -5.5%);
+$background-card-light: color.adjust($background-card, $lightness: -5.5%);
+
+$text-primary: #000000;
+$text-secondary: #3a3a3a;
+
+$gradient-primary: linear-gradient(90deg, $primary-color, $accent-color, $secondary-color, $primary-color);
+$gradient-highlight: linear-gradient(90deg, $sub-highlight-color, $highlight-color, $sub-highlight-color);
