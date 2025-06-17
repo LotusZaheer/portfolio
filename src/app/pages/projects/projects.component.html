@@ -16,12 +16,14 @@
                 <div class="project-links">
                     @if (project.liveUrl) {
                     <a [href]="project.liveUrl" target="_blank" class="link-button">
+                        <img src="assets/images/web.png" >
                         {{ 'others.viewSite' | translate }}
                     </a>
                     }
 
                     @if (project.repoUrl) {
-                    <a [href]="project.repoUrl" target="_blank" class="link-button">
+                    <a [href]="project.repoUrl" target="_blank" class="link-button link-repo">
+                        <img src="assets/images/github.svg">
                         {{ 'others.viewCode' | translate }}
                     </a>
                     }

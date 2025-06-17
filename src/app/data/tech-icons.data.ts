@@ -50,6 +50,14 @@ export const libraryIcons: TechIcon[] = [
         name: 'OR-Tools',
         iconPath: 'assets/images/technologies/or-tools.png'
     },
+    {
+        name: 'Canvas',
+        iconPath: 'assets/images/technologies/canvas.png'
+    },
+    {
+        name: 'Math.js',
+        iconPath: 'assets/images/technologies/mathjs.png'
+    },
 ]
 
 export const frameworkIcons: TechIcon[] = [

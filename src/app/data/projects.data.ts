@@ -73,5 +73,24 @@ export const projects: Project[] = [
     featured: true,
     currentImageIndex: 0,
     progress: 0
+  },
+
+  {
+    id: 1,
+    title: 'GrafCalc',
+    description: 'Calculadora gráfica interactiva moderna que permite visualizar funciones matemáticas en tiempo real con una interfaz intuitiva y personalizable.',
+    frameworks: ['Angular'],
+    libraries: ['Math.js', 'Canvas'],
+    languages: ['TypeScript'],
+    markupStyles: ['SCSS', 'HTML5'],
+    role: 'Desarrollador Frontend',
+    images: [
+      './assets/images/projects/grafcalc-1.png',
+    ],
+    liveUrl: 'https://lotuszaheer.github.io/grafcalc/',
+    repoUrl: 'https://github.com/lotuszaheer/grafcalc/',
+    featured: true,
+    currentImageIndex: 0,
+    progress: 0
   }
 ];

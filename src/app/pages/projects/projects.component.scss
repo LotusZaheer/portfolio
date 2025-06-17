@@ -20,12 +20,13 @@
 .projects-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 2rem;
     padding: 1rem;
 }
 
 .project-card {
-    flex: 1;
+    flex: 0 1 calc(50% - 1rem);
     background: $background-card;
     border-radius: $border-radius-card;
     overflow: hidden;
@@ -55,11 +56,6 @@
     padding-top: 66.67%;
     overflow: hidden;
     transition: background 0.3s ease;
-
-    .project-links {
-        opacity: 0;
-        pointer-events: none;
-    }
 
     .project-image {
         position: absolute;
@@ -91,14 +87,6 @@
         }
     }
 }
-
-.project-image-carousel:hover {
-    .project-links {
-        opacity: 1;
-        pointer-events: auto;
-    }
-}
-
 
 .carousel-progress {
     position: absolute;
@@ -197,18 +185,45 @@
 
     .link-button {
 
-        padding: 0.5rem 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 0.75rem;
         text-align: center;
         background: $secondary-color;
         color: #FFFFFF;
         text-decoration: none;
         border-radius: 4px;
         transition: background-color 0.3s ease;
+        font-size: 0.8rem;
+
+
+        img {
+            height: 1rem;
+            width: 1rem;
+            margin: 0rem 0.2rem;
+        }
 
         &:hover {
+            border: 2px solid $text-secondary;
             background: $accent-color;
+            box-shadow: 0 3px 3px $text-secondary;
         }
     }
+
+    .link-repo {
+        background: $text-secondary;
+        color: $background-card;
+        border: 2px solid $secondary-color;
+
+        &:hover {
+            border: 2px solid $accent-color;
+            background: $text-secondary;
+            box-shadow: 0 3px 3px $accent-color;
+        }
+    }
+
 }
 
 @media (max-width: 720px) {
