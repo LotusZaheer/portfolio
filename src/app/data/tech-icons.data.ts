@@ -15,6 +15,10 @@ export const languageIcons: TechIcon[] = [
     {
         name: 'C++',
         iconPath: 'assets/images/languages/c-plusplus.svg'
+    },
+    {
+        name: 'Java',
+        iconPath: 'assets/images/languages/java.png'
     }
 ];
 
@@ -65,6 +69,10 @@ export const frameworkIcons: TechIcon[] = [
         name: 'Angular',
         iconPath: 'assets/images/technologies/angular.svg'
     },
+    {
+        name: 'Spring Boot',
+        iconPath: 'assets/images/technologies/springboot.png'
+    }
 ]
 
 export const platformIcons: TechIcon[] = [
