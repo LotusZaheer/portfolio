@@ -30,6 +30,10 @@ export const markupStyleIcons: TechIcon[] = [
     {
         name: 'SCSS',
         iconPath: 'assets/images/languages/scss.png'
+    },
+    {
+        name: 'TailwindCSS',
+        iconPath: 'assets/images/languages/tailwindcss.png'
     }
 ]
 
@@ -72,6 +76,14 @@ export const frameworkIcons: TechIcon[] = [
     {
         name: 'Spring Boot',
         iconPath: 'assets/images/technologies/springboot.png'
+    },
+    {
+        name: 'React',
+        iconPath: 'assets/images/technologies/react.png'
+    },
+    {
+        name: 'Vite',
+        iconPath: 'assets/images/technologies/vite.png'
     }
 ]
 
